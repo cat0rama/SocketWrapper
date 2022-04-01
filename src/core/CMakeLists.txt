@@ -31,3 +31,5 @@ target_link_libraries(${PROJECT_NAME} ssl crypto)
 target_include_directories(${PROJECT_NAME} PRIVATE client/)
 
 target_include_directories(${PROJECT_NAME} PRIVATE server/)
+
+target_include_directories(${PROJECT_NAME} PRIVATE defines/)
