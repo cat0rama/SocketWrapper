@@ -3,14 +3,17 @@
 
 namespace socketlib
 {
+	#if defined(_WIN32) || defined(_WIN64)
+	  typedef unsigned long long socket;
+	  typedef unsigned int len_t;
+	#elif defined(__linux__)
+	  typedef unsigned int socket;
+	  typedef unsigned long long len_t;
+	#endif
+
 	enum class eAddrType
 	{
 		IPV4, IPV6
-	};
-
-	enum class eExitStatus
-	{
-		_SUCCES, _ERROR = -1, _LIB_ERROR = -2
 	};
 }
 

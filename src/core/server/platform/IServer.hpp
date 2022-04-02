@@ -16,19 +16,19 @@ namespace socketlib
 	class IServer
 	{
 	public:
-		typedef unsigned long long socket;
-	public:
 		IServer() noexcept;
 
 		IServer(const char* _ip, uint16_t) noexcept;
 
 		virtual ~IServer() noexcept;
 	public:
-		virtual eExitStatus init() = 0;
+		virtual void init() = 0;
 
-		virtual size_t send() const = 0;
+		virtual len_t send(socket _sock, const char* _buf, int _flags = 0) = 0;
 
-		virtual size_t recv() const = 0;
+		virtual len_t recv(const char* _buf, len_t _buf_len, int _flags = 0) = 0;
+
+		virtual void accept() = 0;
 	protected:
 		socket sock;
 		bool is_init;
