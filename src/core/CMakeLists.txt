@@ -28,8 +28,12 @@ add_library(${PROJECT_NAME} STATIC
 
 target_link_libraries(${PROJECT_NAME} ssl crypto)
 
-target_include_directories(${PROJECT_NAME} PRIVATE client/)
+target_include_directories(${PROJECT_NAME} PUBLIC client/platform/${PLATFORM_DIR}/include)
 
-target_include_directories(${PROJECT_NAME} PRIVATE server/)
+target_include_directories(${PROJECT_NAME} PUBLIC server/platform/${PLATFORM_DIR}/include)
+
+target_include_directories(${PROJECT_NAME} PRIVATE server/platform)
+
+target_include_directories(${PROJECT_NAME} PRIVATE client/platform)
 
 target_include_directories(${PROJECT_NAME} PRIVATE defines/)

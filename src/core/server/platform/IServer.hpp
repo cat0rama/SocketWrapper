@@ -27,8 +27,6 @@ namespace socketlib
 		virtual len_t send(socket _sock, const char* _buf, int _flags = 0) = 0;
 
 		virtual len_t recv(const char* _buf, len_t _buf_len, int _flags = 0) = 0;
-
-		virtual void accept() = 0;
 	protected:
 		socket sock;
 		bool is_init;

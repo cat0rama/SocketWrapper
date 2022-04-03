@@ -1,7 +1,7 @@
 #ifndef SERVER_TCP_HPP_
 #define SERVER_TCP_HPP_
 
-#include "../IServer.hpp"
+#include "IServer.hpp"
 
 #include <vector>
 
@@ -11,6 +11,8 @@ namespace socketlib
 	{
 	public:
 		ServerTcp() = default;
+
+		ServerTcp(const char* _ip, uint16_t port);
 
 		~ServerTcp() = default;
 	public:
