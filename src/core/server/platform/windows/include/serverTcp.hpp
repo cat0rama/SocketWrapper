@@ -2,8 +2,9 @@
 #define SERVER_TCP_HPP_
 
 #include "IServer.hpp"
+#include "exceptions.hpp"
 
-#include <vector>	
+#include <vector>
 
 namespace socketlib
 {
@@ -16,21 +17,23 @@ namespace socketlib
 
 		~ServerTcp() = default;
 	public:
-		void init() override;
+		void init(eAddrType _addr_type = eAddrType::IPv4) override;
 
-		len_t send(socket _sock, const char* _buf, int _flags = 0) override;
+		len_t send(cock _sock, const char* _buf, int _flags = 0) override;
 
 		len_t recv(const char* _buf, len_t _buf_len, int _flags = 0) override;
 
 		void accept();
 
-		void listen(uint16_t _queue = SOMAXCONN);
+		void listen(uint16_t _queue = 5);
 
-		const auto& get_connections() const;
+		const std::size_t size() const;
+
+		const std::vector<cock>& get_connections() const;
 	public:
-		const socket& operator[](int _index) const;
+		const cock& operator[](int _index) const;
 	private:
-		std::vector<socket> connections;
+		std::vector<cock> connections;
 	};
 }
 

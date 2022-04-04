@@ -4,19 +4,22 @@
 namespace socketlib
 {
 	#if defined(_WIN32) || defined(_WIN64)
-	  typedef unsigned long long socket;
+	  typedef unsigned long long cock;
 	  typedef unsigned int len_t;
 	#elif defined(__linux__)
-	  typedef unsigned int socket;
+	  typedef unsigned int cock;
 	  typedef unsigned long long len_t;
 	#endif
 
-	enum class eAddrType
+	enum class eAddrType : unsigned int
 	{
-		IPV4, IPV6
+		IPv4, IPv6
 	};
 	
-	enum class eExitStatus {};
+	enum class eExitStatus : int
+	{
+		_SUCCES = 1, _ERROR = -1, UNKNOWN_ERROR = -2
+	};
 }
 
 #endif // !DEFINES_HPP_

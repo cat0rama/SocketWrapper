@@ -17,6 +17,8 @@ file(GLOB_RECURSE SERVER_SOURCE ${PROJECT_SOURCE_DIR}/server/platform/${PLATFORM
 file(GLOB_RECURSE SERVER_INCLUDE ${PROJECT_SOURCE_DIR}/server/platform/${PLATFORM_DIR}/*.hpp)
 
 add_library(${PROJECT_NAME} STATIC
+	utils/exceptions.hpp	
+	utils/defines.hpp
 	${CLIENT_SOURCE}
 	${CLIENT_INCLUDE}
 	${SERVER_SOURCE}
@@ -33,4 +35,4 @@ target_include_directories(${PROJECT_NAME} PUBLIC server/platform/)
 
 target_include_directories(${PROJECT_NAME} PUBLIC client/platform/)
 
-target_include_directories(${PROJECT_NAME} PUBLIC defines/)
+target_include_directories(${PROJECT_NAME} PUBLIC utils/)

@@ -22,13 +22,13 @@ namespace socketlib
 
 		virtual ~IServer() noexcept;
 	public:
-		virtual void init() = 0;
+		virtual void init(eAddrType _addr_type = eAddrType::IPv4) = 0;
 
-		virtual len_t send(socket _sock, const char* _buf, int _flags = 0) = 0;
+		virtual len_t send(cock _sock, const char* _buf, int _flags = 0) = 0;
 
 		virtual len_t recv(const char* _buf, len_t _buf_len, int _flags = 0) = 0;
 	protected:
-		socket sock;
+		cock sock;
 		bool is_init;
 		sockaddr_in addr = { 0 };
 	};
