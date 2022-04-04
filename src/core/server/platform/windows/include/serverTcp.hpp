@@ -3,7 +3,7 @@
 
 #include "IServer.hpp"
 
-#include <vector>
+#include <vector>	
 
 namespace socketlib
 {
@@ -25,6 +25,10 @@ namespace socketlib
 		void accept();
 
 		void listen(uint16_t _queue = SOMAXCONN);
+
+		const auto& get_connections() const;
+	public:
+		const socket& operator[](int _index) const;
 	private:
 		std::vector<socket> connections;
 	};

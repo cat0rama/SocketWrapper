@@ -15,6 +15,8 @@ namespace socketlib
 	{
 		IPV4, IPV6
 	};
+	
+	enum class eExitStatus {};
 }
 
 #endif // !DEFINES_HPP_

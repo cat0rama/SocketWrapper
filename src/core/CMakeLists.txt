@@ -17,9 +17,6 @@ file(GLOB_RECURSE SERVER_SOURCE ${PROJECT_SOURCE_DIR}/server/platform/${PLATFORM
 file(GLOB_RECURSE SERVER_INCLUDE ${PROJECT_SOURCE_DIR}/server/platform/${PLATFORM_DIR}/*.hpp)
 
 add_library(${PROJECT_NAME} STATIC
-	${PROJECT_SOURCE_DIR}/client/platform/IClient.hpp
-	${PROJECT_SOURCE_DIR}/server/platform/IServer.hpp
-	${PROJECT_SOURCE_DIR}/defines/defines.hpp
 	${CLIENT_SOURCE}
 	${CLIENT_INCLUDE}
 	${SERVER_SOURCE}
@@ -32,8 +29,8 @@ target_include_directories(${PROJECT_NAME} PUBLIC client/platform/${PLATFORM_DIR
 
 target_include_directories(${PROJECT_NAME} PUBLIC server/platform/${PLATFORM_DIR}/include)
 
-target_include_directories(${PROJECT_NAME} PRIVATE server/platform)
+target_include_directories(${PROJECT_NAME} PUBLIC server/platform/)
 
-target_include_directories(${PROJECT_NAME} PRIVATE client/platform)
+target_include_directories(${PROJECT_NAME} PUBLIC client/platform/)
 
-target_include_directories(${PROJECT_NAME} PRIVATE defines/)
+target_include_directories(${PROJECT_NAME} PUBLIC defines/)
