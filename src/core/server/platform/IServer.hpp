@@ -18,15 +18,15 @@ namespace socketlib
 	public:
 		IServer() noexcept;
 
-		IServer(const char* _ip, uint16_t) noexcept;
+		IServer(const char* _ip, uint16_t _port, eAddrType _ip_ver = eAddrType::IPv4) noexcept;
 
 		virtual ~IServer() noexcept;
 	public:
-		virtual void init(eAddrType _addr_type = eAddrType::IPv4) = 0;
+		virtual void _bind() const = 0;
 
-		virtual len_t send(cock _sock, const char* _buf, int _flags = 0) = 0;
+		virtual len_t _send(cock _sock, const char* _buf, int _flags = 0) = 0;
 
-		virtual len_t recv(const char* _buf, len_t _buf_len, int _flags = 0) = 0;
+		virtual len_t _recv(const char* _buf, len_t _buf_len, int _flags = 0) = 0;
 	protected:
 		cock sock;
 		bool is_init;
