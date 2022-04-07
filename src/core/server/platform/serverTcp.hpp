@@ -15,7 +15,7 @@ namespace socketlib
 
 		ServerTcp(const char* _ip, uint16_t port);
 
-		ServerTcp(const ServerTcp& _serv);
+		explicit ServerTcp(const ServerTcp& _serv);
 
 		~ServerTcp() = default;
 	public:

@@ -11,10 +11,10 @@ else()
 endif()
 
 file(GLOB_RECURSE CLIENT_SOURCE ${PROJECT_SOURCE_DIR}/client/platform/${PLATFORM_DIR}/*.cpp)
-file(GLOB_RECURSE CLIENT_INCLUDE ${PROJECT_SOURCE_DIR}/client/platform/${PLATFORM_DIR}/*.hpp)
+file(GLOB_RECURSE CLIENT_INCLUDE ${PROJECT_SOURCE_DIR}/client/platform/*.hpp)
 
 file(GLOB_RECURSE SERVER_SOURCE ${PROJECT_SOURCE_DIR}/server/platform/${PLATFORM_DIR}/*.cpp)
-file(GLOB_RECURSE SERVER_INCLUDE ${PROJECT_SOURCE_DIR}/server/platform/${PLATFORM_DIR}/*.hpp)
+file(GLOB_RECURSE SERVER_INCLUDE ${PROJECT_SOURCE_DIR}/server/platform/*.hpp)
 
 add_library(${PROJECT_NAME} STATIC
 	utils/exceptions.hpp	

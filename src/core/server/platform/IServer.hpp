@@ -4,9 +4,9 @@
 #include <cstdint>
 
 #if defined(_WIN32) || defined(_WIN64)
- #include <winsock.h>
+#include <winsock.h>
 #elif defined(__linux__)
- #include <netinet/in.h>
+#include <netinet/in.h>
 #endif
 
 #include "defines.hpp"
@@ -16,11 +16,11 @@ namespace socketlib
 	class IServer
 	{
 	public:
-		IServer() noexcept;
+		IServer();
 
-		IServer(const char* _ip, uint16_t _port, eAddrType _ip_ver = eAddrType::IPv4) noexcept;
+		IServer(const char* _ip, uint16_t _port, eAddrType _ip_ver = eAddrType::IPv4);
 
-		virtual ~IServer() noexcept;
+		virtual ~IServer();
 	public:
 		virtual void _bind() const = 0;
 

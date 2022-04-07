@@ -3,11 +3,22 @@
 namespace socketlib
 {
 	ServerTcp::ServerTcp(const char* _ip, uint16_t _port) : IServer(_ip, _port)
-	{	}
+	{	
+		if (!is_init) {
+			throw socket_error("failed to initialize lib");
+		}
+	}
+
+	ServerTcp::ServerTcp(const ServerTcp& _serv)
+	{
+		this->addr = _serv.addr;
+		this->connections = _serv.connections;
+		this->sock = _serv.sock;
+	}
 
 	void ServerTcp::_bind() const
 	{
-		if (bind(sock, (sockaddr*)&addr, sizeof(addr))) {
+		if ((bind(sock, (sockaddr*)&addr, sizeof(addr)) == SOCKET_ERROR)) {
 			throw socket_error("error to bind socket", WSAGetLastError());
 		}
 	}
@@ -45,5 +56,16 @@ namespace socketlib
 	const cock& ServerTcp::operator[](int _index) const
 	{
 		return connections.at(_index);
+	}
+
+	ServerTcp& ServerTcp::operator=(const ServerTcp& _serv)
+	{
+		if (this != &_serv) {
+			this->addr = _serv.addr;
+			this->connections = _serv.connections;
+			this->sock = _serv.sock;
+		}
+
+		return *this;
 	}
 }

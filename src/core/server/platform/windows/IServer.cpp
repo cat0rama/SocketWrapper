@@ -3,18 +3,21 @@
 #pragma comment(lib, "ws2_32.lib")
 
 #include <winsock.h>
+#include <cstdio>
 
 namespace socketlib
 {
-	IServer::IServer(const char* _ip, uint16_t _port, eAddrType _ip_ver) noexcept : is_init(TRUE)
+	IServer::IServer(const char* _ip, uint16_t _port, eAddrType _ip_ver) : is_init(TRUE)
 	{
 		WSADATA ws_lib;
 
 		if (WSAStartup(MAKEWORD(1, 1), &ws_lib) != 0) {
+			std::printf("%s %d", "failed to winsock init:", WSAGetLastError());
 			is_init = FALSE;
 		}
-
-		if ((sock = socket(AF_INET, SOCK_STREAM, int(eAddrType::IPv4)))) {
+		
+		if ((sock = socket(AF_INET, SOCK_STREAM, int(_ip_ver)) == SOCKET_ERROR)) {
+			std::printf("%s %d", "failed to socket init:", WSAGetLastError());
 			is_init = FALSE;
 		}
 
@@ -23,10 +26,10 @@ namespace socketlib
 		addr.sin_port = htons(_port);		
 	}
 
-	IServer::IServer() noexcept : sock(NULL), is_init(FALSE)
+	IServer::IServer() : sock(NULL), is_init(FALSE)
 	{	}
 
-	IServer::~IServer() noexcept
+	IServer::~IServer()
 	{
 		closesocket(sock);
 		WSACleanup();

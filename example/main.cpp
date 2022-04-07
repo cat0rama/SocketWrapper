@@ -1,4 +1,5 @@
 #include <serverTcp.hpp>
+#include <clientTcp.hpp>
 #include <iostream>
 
 using namespace socketlib;
@@ -14,7 +15,7 @@ public:
 
 	~ExampleServer() = default;
 public:
-	ServerTcp f;
+	ServerTcp server;
 };
 
 class ExampleClient
@@ -28,16 +29,18 @@ public:
 
 	~ExampleClient() = default;
 public:
-
+	ClientTcp client;
 };
 
 int main()
 {
 	try {
+		ServerTcp a("127.0.0.1", 4343);
 
+		a._bind();
 	}
 	catch (const socket_error& er) {
 		std::cout << er.what() << ": " << er.error_code << std::endl;
 	}
-	system("pause");
+	getchar();
 }
