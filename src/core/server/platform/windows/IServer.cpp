@@ -7,7 +7,7 @@
 
 namespace socketlib
 {
-	IServer::IServer(const char* _ip, uint16_t _port, eAddrType _ip_ver) : is_init(TRUE)
+	IServer::IServer(const char* _ip, uint16_t _port) : is_init(TRUE)
 	{
 		WSADATA ws_lib;
 
@@ -16,7 +16,7 @@ namespace socketlib
 			is_init = FALSE;
 		}
 		
-		if ((sock = socket(AF_INET, SOCK_STREAM, int(_ip_ver)) == SOCKET_ERROR)) {
+		if ((sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) == SOCKET_ERROR) {
 			std::printf("%s %d", "failed to socket init:", WSAGetLastError());
 			is_init = FALSE;
 		}

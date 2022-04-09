@@ -12,7 +12,7 @@ namespace socketlib
 		explicit socket_error(const char* _error) : str_error(_error), error_code(0)
 		{	}
 
-		explicit socket_error(const char* _error, int _error_code) : str_error(_error), error_code(0)
+		explicit socket_error(const char* _error, int _error_code) : str_error(_error), error_code(_error_code)
 		{	}
 
 		socket_error(): str_error("unknown error"), error_code(0)
@@ -24,9 +24,13 @@ namespace socketlib
 		{
 			return str_error;
 		}
+
+		int get_code() const
+		{
+			return error_code;
+		}
 	protected:
 		const char* str_error;
-	public:
 		int error_code;
 	};
 }

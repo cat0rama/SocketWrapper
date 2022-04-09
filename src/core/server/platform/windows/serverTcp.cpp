@@ -16,9 +16,9 @@ namespace socketlib
 		this->sock = _serv.sock;
 	}
 
-	void ServerTcp::_bind() const
+	void ServerTcp::_bind()
 	{
-		if ((bind(sock, (sockaddr*)&addr, sizeof(addr)) == SOCKET_ERROR)) {
+		if (bind(sock, (sockaddr*)&addr, sizeof(addr)) == SOCKET_ERROR) {
 			throw socket_error("error to bind socket", WSAGetLastError());
 		}
 	}

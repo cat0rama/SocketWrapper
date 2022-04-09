@@ -18,11 +18,11 @@ namespace socketlib
 	public:
 		IServer();
 
-		IServer(const char* _ip, uint16_t _port, eAddrType _ip_ver = eAddrType::IPv4);
+		IServer(const char* _ip, uint16_t _port);
 
 		virtual ~IServer();
 	public:
-		virtual void _bind() const = 0;
+		virtual void _bind() = 0;
 
 		virtual len_t _send(cock _sock, const char* _buf, int _flags = 0) = 0;
 

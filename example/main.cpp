@@ -35,12 +35,12 @@ public:
 int main()
 {
 	try {
-		ServerTcp a("127.0.0.1", 4343);
+		ServerTcp a("127.0.0.1", 4444);
 
 		a._bind();
 	}
 	catch (const socket_error& er) {
-		std::cout << er.what() << ": " << er.error_code << std::endl;
+		std::cout << er.what() << ": " << er.get_code() << std::endl;
 	}
 	getchar();
 }

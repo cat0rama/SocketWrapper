@@ -19,7 +19,7 @@ namespace socketlib
 
 		~ServerTcp() = default;
 	public:
-		void _bind() const override;
+		void _bind() override;
 
 		len_t _send(cock _sock, const char* _buf, int _flags = 0) override;
 
