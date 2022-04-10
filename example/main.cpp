@@ -38,9 +38,15 @@ int main()
 		ServerTcp a("127.0.0.1", 4444);
 
 		a._bind();
+
+		a._listen();
+
 	}
 	catch (const socket_error& er) {
-		std::cout << er.what() << ": " << er.get_code() << std::endl;
+		std::printf("%s: %d", er.what(), er.get_code());
 	}
-	getchar();
+	catch (const std::exception& er)
+	{
+		std::printf("%s", er.what());
+	}
 }

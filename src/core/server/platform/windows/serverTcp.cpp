@@ -16,31 +16,34 @@ namespace socketlib
 		this->sock = _serv.sock;
 	}
 
-	void ServerTcp::_bind()
+	void ServerTcp::_bind() const
 	{
 		if (bind(sock, (sockaddr*)&addr, sizeof(addr)) == SOCKET_ERROR) {
 			throw socket_error("error to bind socket", WSAGetLastError());
 		}
 	}
 
-	len_t ServerTcp::_send(cock _sock, const char* _buf, int _flags)
+	void ServerTcp::_listen(uint16_t _queue) const
 	{
-		return len_t{};
+		if (listen(sock, _queue)) {
+			throw socket_error("error to listen on socket", WSAGetLastError());
+		}
 	}
 
-	len_t ServerTcp::_recv(const char* _buf, len_t _buf_len, int flags)
+	cock ServerTcp::_accept() const
 	{
-		return len_t{};
+		int addr_size = sizeof(addr);
+		return accept(sock, (sockaddr*)(&addr), &addr_size);
 	}
 
-	void ServerTcp::_accept()
+	len_t ServerTcp::_send(cock _sock, const char* _buf, int _flags) const
 	{
-
+		return send(_sock, _buf, strlen(_buf), _flags);
 	}
 
-	void ServerTcp::_listen(uint16_t _queue)
+	len_t ServerTcp::_recv(char* _buf, len_t _buf_len, int _flags) const
 	{
-
+		return recv(sock, _buf, _buf_len, _flags);
 	}
 
 	const std::size_t ServerTcp::size() const

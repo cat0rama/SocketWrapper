@@ -19,15 +19,15 @@ namespace socketlib
 
 		~ServerTcp() = default;
 	public:
-		void _bind() override;
+		void _bind() const override;
 
-		len_t _send(cock _sock, const char* _buf, int _flags = 0) override;
+		void _listen(uint16_t _queue = 5) const;
 
-		len_t _recv(const char* _buf, len_t _buf_len, int _flags = 0) override;
+		cock _accept() const;
 
-		void _accept();
+		len_t _send(cock _sock, const char* _buf, int _flags = 0) const override;
 
-		void _listen(uint16_t _queue = 5);
+		len_t _recv(char* _buf, len_t _buf_len, int _flags = 0) const override;
 
 		const std::size_t size() const;
 
