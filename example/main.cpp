@@ -1,4 +1,5 @@
 #include <serverTcp.hpp>
+#include <sslSock.hpp>
 #include <clientTcp.hpp>
 #include <iostream>
 
@@ -38,15 +39,13 @@ int main()
 		ServerTcp a("127.0.0.1", 4444);
 
 		a._bind();
-
+		
 		a._listen();
-
 	}
 	catch (const socket_error& er) {
 		std::printf("%s: %d", er.what(), er.get_code());
 	}
-	catch (const std::exception& er)
-	{
+	catch (const std::exception& er) {
 		std::printf("%s", er.what());
 	}
 }

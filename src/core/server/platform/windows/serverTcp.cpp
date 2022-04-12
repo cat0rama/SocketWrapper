@@ -46,6 +46,11 @@ namespace socketlib
 		return recv(sock, _buf, _buf_len, _flags);
 	}
 
+	void ServerTcp::add_connection(cock _client)
+	{
+		connections.push_back(_client);
+	}
+
 	const std::size_t ServerTcp::size() const
 	{
 		return connections.size();
