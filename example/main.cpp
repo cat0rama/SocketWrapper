@@ -1,6 +1,7 @@
 #include <serverTcp.hpp>
 #include <sslSock.hpp>
 #include <clientTcp.hpp>
+#include <memory>
 #include <iostream>
 
 using namespace socketlib;
@@ -9,17 +10,23 @@ class ExampleServer
 {
 public:
 	ExampleServer(const char* _ip, std::uint16_t _port)
-	{	}
+	{	
+		srv = std::make_unique<ServerTcp>(_ip, _port);
+	}
 
-	ExampleServer()
-	{	}
+	ExampleServer() = default;
 
 	~ExampleServer() = default;
 public:
-	ServerTcp server;
+	void start() const
+	{
+		srv->_bind();
+	}
+public:
+	std::unique_ptr<ServerTcp> srv;
 };
 
-class ExampleClient
+class ExampleClient : private ClientTcp
 {
 public:
 	ExampleClient(const char* _ip, std::uint16_t _port)
@@ -29,8 +36,6 @@ public:
 	{	}
 
 	~ExampleClient() = default;
-public:
-	ClientTcp client;
 };
 
 int main()
