@@ -8,6 +8,8 @@ namespace socketlib
 	public:
 		ClientTcp() = default;
 
+		ClientTcp(const char* _ip, std::uint16_t _port);
+		
 		~ClientTcp() = default;
 	private:
 	};
