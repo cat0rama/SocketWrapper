@@ -15,7 +15,7 @@ namespace socketlib
 	{
 		IPv4, IPv6
 	};
-	
+
 	enum class eExitStatus : int
 	{
 		_SUCCES = 1, _ERROR = -1, UNKNOWN_ERROR = -2

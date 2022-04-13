@@ -1,11 +1,15 @@
 #include "serverTcp.hpp"
 
-namespace socketlib
+namespace socketlib 
 {
-	ServerTcp::ServerTcp(const char* _ip, uint16_t _port) : IServer(_ip, _port)
-	{	
+	ServerTcp::ServerTcp(const char* _ip, uint16_t _port) : ISocket(_ip, _port)
+	{
 		if (!is_init) {
-			throw socket_error("failed to initialize lib");
+			throw socket_error("failed to initialize winsock");
+		}
+
+		if ((sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) == SOCKET_ERROR) {
+			throw socket_error("failed to initialize socket", WSAGetLastError());
 		}
 	}
 

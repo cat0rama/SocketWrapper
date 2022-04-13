@@ -13,17 +13,15 @@
 
 namespace socketlib
 {
-	class IServer
+	class ISocket
 	{
 	public:
-		IServer();
+		ISocket();
 
-		IServer(const char* _ip, uint16_t _port);
+		ISocket(const char* _ip, uint16_t _port);
 
-		virtual ~IServer();
+		virtual ~ISocket();
 	public:
-		virtual void _bind() const = 0;
-
 		virtual len_t _send(cock _sock, const char* _buf, int _flags = 0) const = 0;
 
 		virtual len_t _recv(char* _buf, len_t _buf_len, int _flags = 0) const = 0;

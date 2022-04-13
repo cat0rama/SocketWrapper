@@ -10,29 +10,18 @@ else()
 	set(PLATFORM_DIR "linux")
 endif()
 
-file(GLOB_RECURSE CLIENT_SOURCE ${PROJECT_SOURCE_DIR}/client/platform/${PLATFORM_DIR}/*.cpp)
-file(GLOB_RECURSE CLIENT_INCLUDE ${PROJECT_SOURCE_DIR}/client/platform/*.hpp)
-
-file(GLOB_RECURSE SERVER_SOURCE ${PROJECT_SOURCE_DIR}/server/platform/${PLATFORM_DIR}/*.cpp)
-file(GLOB_RECURSE SERVER_INCLUDE ${PROJECT_SOURCE_DIR}/server/platform/*.hpp)
+file(GLOB_RECURSE SOCKET_SOURCES ${PROJECT_SOURCE_DIR}/socket/${PLATFORM_DIR}/*.cpp)
+file(GLOB_RECURSE SOCKET_INCLUDE ${PROJECT_SOURCE_DIR}/socket/*.hpp)
 
 add_library(${PROJECT_NAME} STATIC
 	utils/exceptions.hpp	
 	utils/defines.hpp
-	${CLIENT_SOURCE}
-	${CLIENT_INCLUDE}
-	${SERVER_SOURCE}
-	${SERVER_INCLUDE}
+	${SOCKET_SOURCES}
+	${SOCKET_INCLUDE}
 )
 
 target_link_libraries(${PROJECT_NAME} ssl crypto)
 
-target_include_directories(${PROJECT_NAME} PUBLIC client/platform/${PLATFORM_DIR}/include)
-
-target_include_directories(${PROJECT_NAME} PUBLIC server/platform/${PLATFORM_DIR}/include)
-
-target_include_directories(${PROJECT_NAME} PUBLIC server/platform/)
-
-target_include_directories(${PROJECT_NAME} PUBLIC client/platform/)
+target_include_directories(${PROJECT_NAME} PUBLIC socket/)
 
 target_include_directories(${PROJECT_NAME} PUBLIC utils/)

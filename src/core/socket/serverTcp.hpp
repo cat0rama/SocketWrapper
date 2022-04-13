@@ -1,14 +1,14 @@
 #ifndef SERVER_TCP_HPP_
 #define SERVER_TCP_HPP_
 
-#include "IServer.hpp"
+#include "ISocket.hpp"
 #include "exceptions.hpp"
 
 #include <vector>
 
 namespace socketlib
 {
-	class ServerTcp : public IServer
+	class ServerTcp : public ISocket
 	{
 	public:
 		ServerTcp() = default;
@@ -19,7 +19,7 @@ namespace socketlib
 
 		~ServerTcp() = default;
 	public:
-		void _bind() const override;
+		void _bind() const;
 
 		void _listen(uint16_t _queue = 5) const;
 
