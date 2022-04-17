@@ -5,7 +5,7 @@ project(SocketLibCore LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 
 if(WIN32)
-	set(PLATFORM_DIR "windows")		
+	set(PLATFORM_DIR "windows")
 else()
 	set(PLATFORM_DIR "linux")
 endif()

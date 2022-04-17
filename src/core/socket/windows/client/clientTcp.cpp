@@ -9,4 +9,28 @@ namespace socketlib
 			throw socket_error("failed to initialize socket", WSAGetLastError());
 		}
 	}
+
+	ClientTcp::ClientTcp(const ClientTcp& _clt)
+	{
+		this->addr = _clt.addr;
+		this->sock = _clt.sock;
+	}
+
+	void ClientTcp::_connect() 
+	{
+		if (connect(sock, (sockaddr*)&addr, sizeof(addr)) != NULL) {
+			throw socket_error("failed to connect", WSAGetLastError());
+		}
+	}
+
+	len_t ClientTcp::_send(cock _sock, const char* _buf, int _flags) const
+	{
+		return len_t{};
+	}
+
+	len_t ClientTcp::_recv(char* _buf, len_t _buf_len, int _flags) const
+	{
+		return len_t{};
+	}
+
 }

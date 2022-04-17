@@ -12,6 +12,8 @@ namespace socketlib
 
 		ClientTcp(const char* _ip, std::uint16_t _port);
 		
+		explicit ClientTcp(const ClientTcp& _client);
+
 		~ClientTcp() = default;
 	public:
 		void _connect();

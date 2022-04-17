@@ -1,5 +1,5 @@
 #include <serverTcp.hpp>
-#include <sslSock.hpp>
+#include <sslServer.hpp>
 #include <clientTcp.hpp>
 #include <cstdint>
 #include <memory>
@@ -26,16 +26,25 @@ public:
 	std::unique_ptr<ServerTcp> srv;
 };
 
-class ExampleClient : private ClientTcp
+class ExampleClient
 {
 public:
 	ExampleClient(const char* _ip, std::uint16_t _port)
-	{	}
+	{
+		clt = std::make_unique<ClientTcp>(_ip, _port);
+	}
 
 	ExampleClient()
 	{	}
 
 	~ExampleClient() = default;
+public:
+	void start()
+	{
+
+	}
+private:
+	std::unique_ptr<ClientTcp> clt;
 };
 
 int main()
@@ -43,9 +52,7 @@ int main()
 	try {
 		ServerTcp a("127.0.0.1", 4444);
 
-		a._bind();
-		
-		a._listen();
+
 	}
 	catch (const socket_error& er) {
 		std::printf("%s: %d", er.what(), er.get_code());
@@ -53,4 +60,6 @@ int main()
 	catch (const std::exception& er) {
 		std::printf("%s", er.what());
 	}
+
+	system("pause");
 }
