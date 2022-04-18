@@ -1,9 +1,9 @@
 #include "clientTcp.hpp"
-#include "exceptions.hpp"
+#include "socket_exception.hpp"
 
 namespace socketlib
 {
-	ClientTcp::ClientTcp(const char* _ip, std::uint16_t _port)
+	ClientTcp::ClientTcp(const char* _ip, std::uint16_t _port) : ISocket(_ip, _port)
 	{
 		if ((sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) == SOCKET_ERROR){
 			throw socket_error("failed to initialize socket", WSAGetLastError());
@@ -33,4 +33,13 @@ namespace socketlib
 		return len_t{};
 	}
 
+	ClientTcp& ClientTcp::operator=(const ClientTcp& _client)
+	{
+		if (this != &_client) {
+			this->addr = _client.addr;
+			this->sock = _client.sock;
+		}
+
+		return *this;
+	}
 }

@@ -1,30 +1,9 @@
-#include <serverTcp.hpp>
-#include <sslServer.hpp>
+#include "socket_exception.hpp"
 #include <clientTcp.hpp>
 #include <cstdint>
 #include <memory>
 
 using namespace socketlib;
-
-class ExampleServer
-{
-public:
-	ExampleServer(const char* _ip, std::uint16_t _port)
-	{	
-		srv = std::make_unique<ServerTcp>(_ip, _port);
-	}
-
-	ExampleServer() = default;
-
-	~ExampleServer() = default;
-public:
-	void start() const
-	{
-		srv->_bind();
-	}
-public:
-	std::unique_ptr<ServerTcp> srv;
-};
 
 class ExampleClient
 {
@@ -50,9 +29,9 @@ private:
 int main()
 {
 	try {
-		ServerTcp a("127.0.0.1", 4444);
-
-
+		ClientTcp client("127.0.0.1", 4444);
+		
+		client._connect();
 	}
 	catch (const socket_error& er) {
 		std::printf("%s: %d", er.what(), er.get_code());

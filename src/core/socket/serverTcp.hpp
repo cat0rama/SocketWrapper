@@ -2,7 +2,6 @@
 #define SERVER_TCP_HPP_
 
 #include "ISocket.hpp"
-#include "exceptions.hpp"
 
 #include <vector>
 

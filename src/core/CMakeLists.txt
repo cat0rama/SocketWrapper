@@ -14,7 +14,7 @@ file(GLOB_RECURSE SOCKET_SOURCES ${PROJECT_SOURCE_DIR}/socket/${PLATFORM_DIR}/*.
 file(GLOB_RECURSE SOCKET_INCLUDE ${PROJECT_SOURCE_DIR}/socket/*.hpp)
 
 add_library(${PROJECT_NAME} STATIC
-	utils/exceptions.hpp	
+	utils/socket_exception.hpp	
 	utils/defines.hpp
 	${SOCKET_SOURCES}
 	${SOCKET_INCLUDE}

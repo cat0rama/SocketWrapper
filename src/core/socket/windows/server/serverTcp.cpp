@@ -1,4 +1,5 @@
 #include "serverTcp.hpp"
+#include "socket_exception.hpp"
 
 namespace socketlib 
 {
