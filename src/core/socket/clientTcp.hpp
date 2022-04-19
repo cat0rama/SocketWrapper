@@ -16,7 +16,7 @@ namespace socketlib
 
 		~ClientTcp() = default;
 	public:
-		void _connect();
+		int _connect() const;
 
 		len_t _send(cock _sock, const char* _buf, int _flags = 0) const override;
 

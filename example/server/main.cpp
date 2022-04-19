@@ -1,7 +1,6 @@
 #include <socket_exception.hpp>
 #include <serverTcp.hpp>
 #include <sslServer.hpp>
-#include <clientTcp.hpp>
 #include <cstdint>
 #include <memory>
 

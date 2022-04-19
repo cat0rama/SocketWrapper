@@ -1,4 +1,4 @@
-#include "socket_exception.hpp"
+#include <socket_exception.hpp>
 #include <clientTcp.hpp>
 #include <cstdint>
 #include <memory>
@@ -20,7 +20,7 @@ public:
 public:
 	void start()
 	{
-
+		
 	}
 private:
 	std::unique_ptr<ClientTcp> clt;
@@ -29,9 +29,7 @@ private:
 int main()
 {
 	try {
-		ClientTcp client("127.0.0.1", 4444);
-		
-		client._connect();
+
 	}
 	catch (const socket_error& er) {
 		std::printf("%s: %d", er.what(), er.get_code());

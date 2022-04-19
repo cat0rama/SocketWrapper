@@ -16,21 +16,19 @@ namespace socketlib
 		this->sock = _clt.sock;
 	}
 
-	void ClientTcp::_connect() 
+	int ClientTcp::_connect() const
 	{
-		if (connect(sock, (sockaddr*)&addr, sizeof(addr)) != NULL) {
-			throw socket_error("failed to connect", WSAGetLastError());
-		}
+		return connect(sock, (sockaddr*)&addr, sizeof(addr));
 	}
 
 	len_t ClientTcp::_send(cock _sock, const char* _buf, int _flags) const
 	{
-		return len_t{};
+		return send(_sock, _buf, strlen(_buf), _flags);
 	}
 
 	len_t ClientTcp::_recv(char* _buf, len_t _buf_len, int _flags) const
 	{
-		return len_t{};
+		return recv(sock, _buf, _buf_len, _flags);
 	}
 
 	ClientTcp& ClientTcp::operator=(const ClientTcp& _client)
