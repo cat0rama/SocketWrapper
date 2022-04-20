@@ -29,4 +29,9 @@ namespace socketlib
 		closesocket(sock);
 		WSACleanup();
 	}
+
+	const cock& ISocket::operator*() const 
+	{
+		return sock;
+	}
 }

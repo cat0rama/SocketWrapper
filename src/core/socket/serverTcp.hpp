@@ -26,7 +26,7 @@ namespace socketlib
 
 		virtual len_t _send(cock _sock, const char* _buf, int _flags = 0) const override;
 
-		virtual len_t _recv(char* _buf, len_t _buf_len, int _flags = 0) const override;
+		virtual len_t _recv(cock _sock, char* _buf, len_t _buf_len, int _flags = 0) const override;
 
 		void add_connection(cock _client);
 

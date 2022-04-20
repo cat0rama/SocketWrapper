@@ -46,9 +46,9 @@ namespace socketlib
 		return send(_sock, _buf, strlen(_buf), _flags);
 	}
 
-	len_t ServerTcp::_recv(char* _buf, len_t _buf_len, int _flags) const
+	len_t ServerTcp::_recv(cock _sock, char* _buf, len_t _buf_len, int _flags) const
 	{
-		return recv(sock, _buf, _buf_len, _flags);
+		return recv(_sock, _buf, _buf_len, _flags);
 	}
 
 	void ServerTcp::add_connection(cock _client)

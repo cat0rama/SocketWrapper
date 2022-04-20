@@ -24,7 +24,9 @@ namespace socketlib
 	public:
 		virtual len_t _send(cock _sock, const char* _buf, int _flags = 0) const = 0;
 
-		virtual len_t _recv(char* _buf, len_t _buf_len, int _flags = 0) const = 0;
+		virtual len_t _recv(cock _sock, char* _buf, len_t _buf_len, int _flags = 0) const = 0;
+	public:
+		const cock& operator*() const;
 	protected:
 		cock sock;
 		bool is_init;

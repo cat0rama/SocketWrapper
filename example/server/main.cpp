@@ -3,6 +3,7 @@
 #include <sslServer.hpp>
 #include <cstdint>
 #include <memory>
+#include <iostream>
 
 using namespace socketlib;
 
@@ -35,9 +36,21 @@ int main()
 
 		a._listen();
 
-		if (a._accept()) {
-			std::printf("%s", "connected!");
+		cock soc;
+
+		if (soc = a._accept()) {
+			std::printf("%s %zu", "connected! sock: \n", soc);
 		}
+
+		char buffer[100] = { 0 };
+
+		auto recv_result = a._recv(soc, buffer, sizeof(buffer));
+
+		if (recv_result == SOCKET_ERROR) {
+			std::cout << "WsaError: " << WSAGetLastError();
+		}
+
+		std::cout << buffer << std::endl;
 	}
 	catch (const socket_error& er) {
 		std::printf("%s: %d", er.what(), er.get_code());

@@ -29,7 +29,15 @@ private:
 int main()
 {
 	try {
+		ClientTcp client("127.0.0.1", 4444);
 
+		client._connect();
+
+		std::string str = {"hello"};
+		
+		auto send_result = client._send(*client, str.c_str());
+
+		std::printf("%d", send_result);
 	}
 	catch (const socket_error& er) {
 		std::printf("%s: %d", er.what(), er.get_code());
