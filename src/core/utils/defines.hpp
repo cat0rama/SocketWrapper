@@ -13,12 +13,17 @@ namespace socketlib
 
 	enum class eAddrType : unsigned int
 	{
-		IPv4, IPv6
+		  IPv4 = 2, IPv6 = 23
 	};
 
 	enum class eExitStatus : int
 	{
 		_SUCCES = 1, _ERROR = -1, UNKNOWN_ERROR = -2
+	};
+
+	enum class eShutdownType : unsigned int
+	{
+		SHUT_RECV, SHUT_SEND, SHUT_ALL
 	};
 }
 

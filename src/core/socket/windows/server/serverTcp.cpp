@@ -3,7 +3,7 @@
 
 namespace socketlib 
 {
-	ServerTcp::ServerTcp(const char* _ip, uint16_t _port) : ISocket(_ip, _port)
+	ServerTcp::ServerTcp(const char* _ip, uint16_t _port, eAddrType _addr_type) : ISocket(_ip, _port, _addr_type)
 	{
 		if (!is_init) {
 			throw socket_error("failed to initialize winsock");
@@ -39,16 +39,6 @@ namespace socketlib
 	{
 		int addr_size = sizeof(addr);
 		return accept(sock, (sockaddr*)(&addr), &addr_size);
-	}
-
-	len_t ServerTcp::_send(cock _sock, const char* _buf, int _flags) const
-	{
-		return send(_sock, _buf, strlen(_buf), _flags);
-	}
-
-	len_t ServerTcp::_recv(cock _sock, char* _buf, len_t _buf_len, int _flags) const
-	{
-		return recv(_sock, _buf, _buf_len, _flags);
 	}
 
 	void ServerTcp::add_connection(cock _client)

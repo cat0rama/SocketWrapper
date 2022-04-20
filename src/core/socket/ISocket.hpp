@@ -4,9 +4,10 @@
 #include <cstdint>
 
 #if defined(_WIN32) || defined(_WIN64)
-#include <winsock.h>
+ #include <Ws2tcpip.h>
 #elif defined(__linux__)
-#include <netinet/in.h>
+ #include <netinet/in.h>
+ #include <sys/socket.h>	
 #endif
 
 #include "defines.hpp"
@@ -18,13 +19,15 @@ namespace socketlib
 	public:
 		ISocket();
 
-		ISocket(const char* _ip, uint16_t _port);
+		ISocket(const char* _ip, uint16_t _port, eAddrType _addr_type = eAddrType::IPv4);
 
 		virtual ~ISocket();
 	public:
-		virtual len_t _send(cock _sock, const char* _buf, int _flags = 0) const = 0;
+		virtual len_t _send(cock _sock, const char* _buf, int _flags = 0) const;
 
-		virtual len_t _recv(cock _sock, char* _buf, len_t _buf_len, int _flags = 0) const = 0;
+		virtual len_t _recv(cock _sock, char* _buf, len_t _buf_len, int _flags = 0) const;
+
+		virtual int _shutdown(cock _sock, eShutdownType _how = eShutdownType::SHUT_ALL) const;
 	public:
 		const cock& operator*() const;
 	protected:

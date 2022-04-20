@@ -12,7 +12,7 @@ namespace socketlib
 	public:
 		ServerTcp() = default;
 
-		ServerTcp(const char* _ip, uint16_t port);
+		ServerTcp(const char* _ip, uint16_t port, eAddrType _addr_type = eAddrType::IPv4);
 
 		explicit ServerTcp(const ServerTcp& _serv);
 
@@ -23,11 +23,7 @@ namespace socketlib
 		void _listen(uint16_t _queue = 5) const;
 
 		cock _accept() const;
-
-		virtual len_t _send(cock _sock, const char* _buf, int _flags = 0) const override;
-
-		virtual len_t _recv(cock _sock, char* _buf, len_t _buf_len, int _flags = 0) const override;
-
+		
 		void add_connection(cock _client);
 
 		const std::size_t size() const;

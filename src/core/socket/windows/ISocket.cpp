@@ -7,7 +7,7 @@
 
 namespace socketlib
 {
-	ISocket::ISocket(const char* _ip, uint16_t _port) : is_init(TRUE)
+	ISocket::ISocket(const char* _ip, uint16_t _port, eAddrType _addr_type) : is_init(TRUE)
 	{
 		WSADATA ws_lib;
 
@@ -28,6 +28,21 @@ namespace socketlib
 	{
 		closesocket(sock);
 		WSACleanup();
+	}
+
+	len_t ISocket::_send(cock _sock, const char* _buf, int _flags) const
+	{
+		return send(_sock, _buf, strlen(_buf), _flags);
+	}
+
+	len_t ISocket::_recv(cock _sock, char* _buf, len_t _buf_len, int _flags) const
+	{
+		return recv(_sock, _buf, _buf_len, _flags);
+	}
+
+	int ISocket::_shutdown(cock _sock, eShutdownType _how) const
+	{
+		return shutdown(_sock, int(_how));
 	}
 
 	const cock& ISocket::operator*() const 

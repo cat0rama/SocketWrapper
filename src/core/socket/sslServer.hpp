@@ -16,9 +16,9 @@ namespace socketlib
 
 		~SSLServer();
 	public:
-		void send(cock _sock, const char* _buf, int _flags = 0);
+		len_t _send(cock _sock, const char* _buf, int _flags = 0) const override;
 
-		void recv(char* _buf, len_t _buf_len, int _flags = 0);
+		len_t _recv(cock _sock, char* _buf, len_t _buf_len, int _flags = 0) const override;
 	private:
 		
 	};
