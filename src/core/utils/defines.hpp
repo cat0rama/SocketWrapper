@@ -25,6 +25,11 @@ namespace socketlib
 	{
 		SHUT_RECV, SHUT_SEND, SHUT_ALL
 	};
+
+	enum class eMachineType : int
+	{
+		NONE = -1, SERVER, CLIENT
+	};
 }
 
 #endif // !DEFINES_HPP_

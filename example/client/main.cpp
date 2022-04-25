@@ -20,7 +20,7 @@ public:
 public:
 	void start()
 	{
-		
+
 	}
 private:
 	std::unique_ptr<ClientTcp> clt;

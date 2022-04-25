@@ -12,10 +12,10 @@ endif()
 
 file(GLOB_RECURSE SOCKET_SOURCES ${PROJECT_SOURCE_DIR}/socket/${PLATFORM_DIR}/*.cpp)
 file(GLOB_RECURSE SOCKET_INCLUDE ${PROJECT_SOURCE_DIR}/socket/*.hpp)
+file(GLOB_RECURSE UTILS_INCLUDE ${PROJECT_SOURCE_DIR}/utils/*.hpp)
 
 add_library(${PROJECT_NAME} STATIC
-	utils/socket_exception.hpp	
-	utils/defines.hpp
+	${UTILS_INCLUDE}
 	${SOCKET_SOURCES}
 	${SOCKET_INCLUDE}
 )

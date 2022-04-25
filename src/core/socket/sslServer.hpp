@@ -2,10 +2,7 @@
 #define SSLSERVER_HPP_
 
 #include "serverTcp.hpp"
-
-#include <openssl/bio.h>	
-#include <openssl/ssl.h>
-#include <openssl/err.h>
+#include "SSLPtr.hpp"
 
 namespace socketlib
 {
@@ -20,7 +17,7 @@ namespace socketlib
 
 		len_t _recv(cock _sock, char* _buf, len_t _buf_len, int _flags = 0) const override;
 	private:
-		
+		SSLPtr ssl;
 	};
 }
 

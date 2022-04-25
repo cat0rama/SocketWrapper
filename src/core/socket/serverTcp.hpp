@@ -22,7 +22,7 @@ namespace socketlib
 
 		void _listen(uint16_t _queue = 5) const;
 
-		cock _accept() const;
+		virtual cock _accept() const;
 		
 		void add_connection(cock _client);
 
