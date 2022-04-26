@@ -1,6 +1,0 @@
-﻿  ISocket.cpp
-  serverTcp.cpp
-  sslServer.cpp
-  SSLPtr.cpp
-  Создание кода...
-  SocketLibCore.vcxproj -> C:\Users\Retr0\Desktop\SocketLib\build\src\core\Release\SocketLibCore.lib
