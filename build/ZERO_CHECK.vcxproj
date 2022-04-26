@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BEFDBB53-9778-3001-8093-65790BFD9C38}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.20348.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ZERO_CHECK</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\fa5aabab96ae8e7efa2390c55b0c3f11\generate.stamp.rule">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Retr0/Desktop/SocketLib -BC:/Users/Retr0/Desktop/SocketLib/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Retr0/Desktop/SocketLib/build/SocketLib.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.23\Templates\CPackConfig.cmake.in;C:\Users\Retr0\Desktop\SocketLib\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\3.23.1\CMakeCCompiler.cmake;C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\3.23.1\CMakeCXXCompiler.cmake;C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\3.23.1\CMakeRCCompiler.cmake;C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\3.23.1\CMakeSystem.cmake;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\opensslconf.h.cmake;C:\Users\Retr0\Desktop\SocketLib\example\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\example\client\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\example\server\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\src\core\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\apps\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\cmake\MSVCRuntime.cmake;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\cmake\cmake_uninstall.cmake.in;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\crypto\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\crypto\bn_conf.h.cmake;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\crypto\buildinf.h.cmake;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\crypto\dso_conf.h.cmake;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\src\core\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\crypto\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\ssl\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\apps\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\example\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\example\client\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\example\server\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Retr0/Desktop/SocketLib -BC:/Users/Retr0/Desktop/SocketLib/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Retr0/Desktop/SocketLib/build/SocketLib.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.23\Templates\CPackConfig.cmake.in;C:\Users\Retr0\Desktop\SocketLib\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\3.23.1\CMakeCCompiler.cmake;C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\3.23.1\CMakeCXXCompiler.cmake;C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\3.23.1\CMakeRCCompiler.cmake;C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\3.23.1\CMakeSystem.cmake;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\opensslconf.h.cmake;C:\Users\Retr0\Desktop\SocketLib\example\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\example\client\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\example\server\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\src\core\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\apps\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\cmake\MSVCRuntime.cmake;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\cmake\cmake_uninstall.cmake.in;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\crypto\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\crypto\bn_conf.h.cmake;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\crypto\buildinf.h.cmake;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\crypto\dso_conf.h.cmake;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\src\core\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\crypto\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\ssl\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\apps\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\example\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\example\client\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\example\server\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Retr0/Desktop/SocketLib -BC:/Users/Retr0/Desktop/SocketLib/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Retr0/Desktop/SocketLib/build/SocketLib.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.23\Templates\CPackConfig.cmake.in;C:\Users\Retr0\Desktop\SocketLib\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\3.23.1\CMakeCCompiler.cmake;C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\3.23.1\CMakeCXXCompiler.cmake;C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\3.23.1\CMakeRCCompiler.cmake;C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\3.23.1\CMakeSystem.cmake;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\opensslconf.h.cmake;C:\Users\Retr0\Desktop\SocketLib\example\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\example\client\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\example\server\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\src\core\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\apps\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\cmake\MSVCRuntime.cmake;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\cmake\cmake_uninstall.cmake.in;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\crypto\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\crypto\bn_conf.h.cmake;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\crypto\buildinf.h.cmake;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\crypto\dso_conf.h.cmake;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\src\core\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\crypto\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\ssl\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\apps\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\example\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\example\client\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\example\server\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Retr0/Desktop/SocketLib -BC:/Users/Retr0/Desktop/SocketLib/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Retr0/Desktop/SocketLib/build/SocketLib.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.23\Templates\CPackConfig.cmake.in;C:\Users\Retr0\Desktop\SocketLib\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\3.23.1\CMakeCCompiler.cmake;C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\3.23.1\CMakeCXXCompiler.cmake;C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\3.23.1\CMakeRCCompiler.cmake;C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\3.23.1\CMakeSystem.cmake;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\opensslconf.h.cmake;C:\Users\Retr0\Desktop\SocketLib\example\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\example\client\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\example\server\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\src\core\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\apps\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\cmake\MSVCRuntime.cmake;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\cmake\cmake_uninstall.cmake.in;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\crypto\CMakeLists.txt;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\crypto\bn_conf.h.cmake;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\crypto\buildinf.h.cmake;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\crypto\dso_conf.h.cmake;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Retr0\Desktop\SocketLib\build\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\src\core\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\crypto\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\ssl\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\apps\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\example\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\example\client\CMakeFiles\generate.stamp;C:\Users\Retr0\Desktop\SocketLib\build\example\server\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

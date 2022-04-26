@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\bio_ssl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\d1_lib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\d1_msg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\d1_srtp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\methods.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\packet.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\pqueue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\s3_cbc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\s3_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\s3_lib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\s3_msg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_asn1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_cert.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_ciph.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_conf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_err.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_lib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_mcnf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_rsa.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_sess.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_stat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_txt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_utst.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\t1_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\t1_lib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\t1_trce.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\tls13_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\tls_srp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\record\dtls1_bitmap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\record\rec_layer_d1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\record\rec_layer_s3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\record\ssl3_buffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\record\ssl3_record.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\record\ssl3_record_tls13.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\extensions.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\extensions_clnt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\extensions_cust.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\extensions_srvr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\statem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\statem_clnt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\statem_dtls.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\statem_lib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\statem_srvr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F1F150CA-EB0A-3D6B-B820-84DB7B967239}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

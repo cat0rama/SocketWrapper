@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{09227DD3-B3A0-3AED-AFA8-D57721326550}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.20348.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ssl</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\ssl\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ssl.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libssl-1_1-x64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\ssl\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ssl.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libssl-1_1-x64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\ssl\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ssl.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">libssl-1_1-x64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\ssl\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ssl.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">libssl-1_1-x64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\include;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level2</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;OPENSSL_NO_ASM;OPENSSL_NO_STATIC_ENGINE;OPENSSLDIR="C:/ssl";ENGINESDIR="C:/engines-1.1";OPENSSL_SYSNAME_WIN32;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;OPENSSL_NO_ASM;OPENSSL_NO_STATIC_ENGINE;OPENSSLDIR=\"C:/ssl\";ENGINESDIR=\"C:/engines-1.1\";OPENSSL_SYSNAME_WIN32;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\include;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\include;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\include;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level2</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;OPENSSL_NO_ASM;OPENSSL_NO_STATIC_ENGINE;OPENSSLDIR="C:/ssl";ENGINESDIR="C:/engines-1.1";OPENSSL_SYSNAME_WIN32;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;OPENSSL_NO_ASM;OPENSSL_NO_STATIC_ENGINE;OPENSSLDIR=\"C:/ssl\";ENGINESDIR=\"C:/engines-1.1\";OPENSSL_SYSNAME_WIN32;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\include;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\include;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\include;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level2</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;OPENSSL_NO_ASM;OPENSSL_NO_STATIC_ENGINE;OPENSSLDIR="C:/ssl";ENGINESDIR="C:/engines-1.1";OPENSSL_SYSNAME_WIN32;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;OPENSSL_NO_ASM;OPENSSL_NO_STATIC_ENGINE;OPENSSLDIR=\"C:/ssl\";ENGINESDIR=\"C:/engines-1.1\";OPENSSL_SYSNAME_WIN32;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\include;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\include;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\include;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level2</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;OPENSSL_NO_ASM;OPENSSL_NO_STATIC_ENGINE;OPENSSLDIR="C:/ssl";ENGINESDIR="C:/engines-1.1";OPENSSL_SYSNAME_WIN32;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;OPENSSL_NO_ASM;OPENSSL_NO_STATIC_ENGINE;OPENSSLDIR=\"C:/ssl\";ENGINESDIR=\"C:/engines-1.1\";OPENSSL_SYSNAME_WIN32;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\include;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\include;C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Retr0/Desktop/SocketLib/vendor/openssl-cmake/ssl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Retr0/Desktop/SocketLib -BC:/Users/Retr0/Desktop/SocketLib/build --check-stamp-file C:/Users/Retr0/Desktop/SocketLib/build/vendor/openssl-cmake/ssl/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\ssl\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Retr0/Desktop/SocketLib/vendor/openssl-cmake/ssl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Retr0/Desktop/SocketLib -BC:/Users/Retr0/Desktop/SocketLib/build --check-stamp-file C:/Users/Retr0/Desktop/SocketLib/build/vendor/openssl-cmake/ssl/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\ssl\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Retr0/Desktop/SocketLib/vendor/openssl-cmake/ssl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Retr0/Desktop/SocketLib -BC:/Users/Retr0/Desktop/SocketLib/build --check-stamp-file C:/Users/Retr0/Desktop/SocketLib/build/vendor/openssl-cmake/ssl/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\ssl\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Retr0/Desktop/SocketLib/vendor/openssl-cmake/ssl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Retr0/Desktop/SocketLib -BC:/Users/Retr0/Desktop/SocketLib/build --check-stamp-file C:/Users/Retr0/Desktop/SocketLib/build/vendor/openssl-cmake/ssl/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\ssl\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\bio_ssl.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\d1_lib.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\d1_msg.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\d1_srtp.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\methods.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\packet.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\pqueue.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\s3_cbc.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\s3_enc.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\s3_lib.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\s3_msg.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_asn1.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_cert.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_ciph.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_conf.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_err.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_init.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_lib.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_mcnf.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_rsa.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_sess.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_stat.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_txt.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\ssl_utst.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\t1_enc.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\t1_lib.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\t1_trce.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\tls13_enc.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\tls_srp.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\record\dtls1_bitmap.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\record\rec_layer_d1.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\record\rec_layer_s3.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\record\ssl3_buffer.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\record\ssl3_record.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\record\ssl3_record_tls13.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\extensions.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\extensions_clnt.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\extensions_cust.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\extensions_srvr.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\statem.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\statem_clnt.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\statem_dtls.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\statem_lib.c" />
+    <ClCompile Include="C:\Users\Retr0\Desktop\SocketLib\vendor\openssl-cmake\ssl\statem\statem_srvr.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Retr0\Desktop\SocketLib\build\ZERO_CHECK.vcxproj">
+      <Project>{BEFDBB53-9778-3001-8093-65790BFD9C38}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Retr0\Desktop\SocketLib\build\vendor\openssl-cmake\crypto\crypto.vcxproj">
+      <Project>{38D546DC-53D6-3AD8-84A5-17F3809AA99B}</Project>
+      <Name>crypto</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,11 @@
+﻿  Checking Build System
+  CMake is re-running because C:/Users/Retr0/Desktop/SocketLib/build/src/core/CMakeFiles/generate.stamp is out-of-date.
+    the file 'C:/Users/Retr0/Desktop/SocketLib/src/core/CMakeLists.txt'
+    is newer than 'C:/Users/Retr0/Desktop/SocketLib/build/src/core/CMakeFiles/generate.stamp.depend'
+    result='-1'
+  -- Selecting Windows SDK version 10.0.20348.0 to target Windows 10.0.19044.
+  -- OpenSSL version 1.1.1n
+  -- MSVC: using statically-linked runtime (/MT and /MTd).
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Retr0/Desktop/SocketLib/build

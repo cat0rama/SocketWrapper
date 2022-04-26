@@ -27,7 +27,7 @@ public:
 	std::unique_ptr<ServerTcp> srv;
 };
 
-int main()
+int main(int argc, char** argv)
 {
 	try {
 		ServerTcp a("127.0.0.1", 4444);

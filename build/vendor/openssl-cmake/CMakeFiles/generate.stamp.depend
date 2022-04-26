@@ -1,0 +1,11 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.23/Modules/CPack.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/CPackComponent.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/CheckTypeSize.cmake
+C:/Program Files/CMake/share/cmake-3.23/Templates/CPackConfig.cmake.in
+C:/Users/Retr0/Desktop/SocketLib/build/vendor/openssl-cmake/opensslconf.h.cmake
+C:/Users/Retr0/Desktop/SocketLib/vendor/openssl-cmake/CMakeLists.txt
+C:/Users/Retr0/Desktop/SocketLib/vendor/openssl-cmake/cmake/MSVCRuntime.cmake
+C:/Users/Retr0/Desktop/SocketLib/vendor/openssl-cmake/cmake/cmake_uninstall.cmake.in
