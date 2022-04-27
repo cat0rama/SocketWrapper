@@ -9,7 +9,7 @@ namespace socketlib
 	class SSLServer : public ServerTcp 
 	{
 	public:
-		SSLServer();
+		SSLServer(const char* _ip, std::uint16_t _port, eAddrType _type = eAddrType::IPv4);
 
 		~SSLServer();
 	public:
@@ -18,6 +18,8 @@ namespace socketlib
 		len_t _recv(cock _sock, char* _buf, len_t _buf_len, int _flags = 0) const override;
 
 		int ssl_accept() const;
+
+		const SSLPtr& get_ssl() const;
 	private:
 		SSLPtr ssl = eMachineType::SERVER;
 	};

@@ -10,9 +10,7 @@ namespace socketlib
 	class ServerTcp : public ISocket
 	{
 	public:
-		ServerTcp() = default;
-
-		ServerTcp(const char* _ip, uint16_t port, eAddrType _addr_type = eAddrType::IPv4);
+		ServerTcp(const char* _ip, uint16_t _port, eAddrType _addr_type = eAddrType::IPv4);
 
 		explicit ServerTcp(const ServerTcp& _serv);
 

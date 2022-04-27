@@ -1,6 +1,5 @@
 #include <socket_exception.hpp>
 #include <clientTcp.hpp>
-#include <SSLPtr.hpp>
 #include <cstdint>
 #include <memory>
 

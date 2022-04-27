@@ -2,7 +2,8 @@
 
 namespace socketlib
 {
-	SSLServer::SSLServer()
+	SSLServer::SSLServer(const char* _ip, std::uint16_t _port, eAddrType _type) 
+		: ServerTcp(_ip, _port, _type)
 	{	}
 						
 	SSLServer::~SSLServer()
@@ -21,5 +22,10 @@ namespace socketlib
 	int SSLServer::ssl_accept() const
 	{
 		return SSL_accept(*ssl);
+	}
+
+ 	const SSLPtr& SSLServer::get_ssl() const
+	{
+		return ssl;
 	}
 }
