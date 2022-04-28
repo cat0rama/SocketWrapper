@@ -17,6 +17,8 @@ namespace socketlib
 
 		len_t _recv(cock _sock, char* _buf, len_t _buf_len, int _flags = 0) const override;
 
+		std::size_t GetError() const;
+
 		int ssl_accept() const;
 
 		const SSLPtr& get_ssl() const;

@@ -19,6 +19,11 @@ namespace socketlib
 		return SSL_read(*ssl, _buf, _buf_len);
 	}
 
+	std::size_t SSLServer::GetError() const
+	{
+		return ERR_get_error();
+	}
+
 	int SSLServer::ssl_accept() const
 	{
 		return SSL_accept(*ssl);
