@@ -23,37 +23,37 @@ namespace socketlib
 		this->sock = _serv.sock;
 	}
 
-	void ServerTcp::_bind() const
+	void ServerTcp::Bind() const
 	{
 		if (bind(sock, (sockaddr*)&addr, sizeof(addr)) == SOCKET_ERROR) {
 			throw socket_error("error to bind socket", WSAGetLastError());
 		}
 	}
 
-	void ServerTcp::_listen(uint16_t _queue) const
+	void ServerTcp::Listen(uint16_t _queue) const
 	{
 		if (listen(sock, _queue)) {
 			throw socket_error("error to listen on socket", WSAGetLastError());
 		}
 	}
 
-	cock ServerTcp::_accept() const
+	cock ServerTcp::Accept() const
 	{
 		int addr_size = sizeof(addr);
 		return accept(sock, (sockaddr*)(&addr), &addr_size);
 	}
 
-	void ServerTcp::add_connection(cock _client)
+	void ServerTcp::AddConnection(cock _client)
 	{
 		connections.push_back(_client);
 	}
 
-	const std::size_t ServerTcp::size() const
+	const std::size_t ServerTcp::Size() const
 	{
 		return connections.size();
 	}
 
-	const std::vector<cock>& ServerTcp::get_connections() const
+	const std::vector<cock>& ServerTcp::GetConnections() const
 	{
 		return connections;
 	}

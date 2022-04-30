@@ -27,11 +27,11 @@ namespace socketlib
 	public:
 		ssl* operator*() const;
 	public:
-		int shutdown() const;
+		int Shutdown() const;
 
-		int set_ssl_cert(const char* _cert_file_path) const;
+		int SetCert(const char* _cert_file_path) const;
 
-		int set_private_key(const char* _key_file_path) const;
+		int SetKey(const char* _key_file_path) const;
 	private:
 		ssl_context* ssl_ctx;
 		ssl* ssl_obj;

@@ -16,17 +16,17 @@ namespace socketlib
 
 		~ServerTcp() = default;
 	public:
-		void _bind() const;
+		void Bind() const;
 
-		void _listen(uint16_t _queue = 5) const;
+		void Listen(uint16_t _queue = 5) const;
 
-		cock _accept() const;
+		cock Accept() const;
 		
-		void add_connection(cock _client);
+		void AddConnection(cock _client);
 
-		const std::size_t size() const;
+		const std::size_t Size() const;
 
-		const std::vector<cock>& get_connections() const;
+		const std::vector<cock>& GetConnections() const;
 	public:
 		const cock& operator[](int _index) const;
 

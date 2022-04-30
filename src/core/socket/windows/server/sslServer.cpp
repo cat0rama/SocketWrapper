@@ -9,12 +9,12 @@ namespace socketlib
 	SSLServer::~SSLServer()
 	{	}
 
-	len_t SSLServer::_send(cock _sock, const char* _buf, int _flags) const
+	len_t SSLServer::Send(cock _sock, const char* _buf, int _flags) const
 	{
 		return SSL_write(*ssl, _buf, strlen(_buf));
 	}
 	
-	len_t SSLServer::_recv(cock _sock, char* _buf, len_t _buf_len, int _flags) const
+	len_t SSLServer::Receive(cock _sock, char* _buf, len_t _buf_len, int _flags) const
 	{
 		return SSL_read(*ssl, _buf, _buf_len);
 	}
@@ -24,12 +24,12 @@ namespace socketlib
 		return ERR_get_error();
 	}
 
-	int SSLServer::ssl_accept() const
+	int SSLServer::SSLAccept() const
 	{
 		return SSL_accept(*ssl);
 	}
 
- 	const SSLPtr& SSLServer::get_ssl() const
+ 	const SSLPtr& SSLServer::GetSSL() const
 	{
 		return ssl;
 	}

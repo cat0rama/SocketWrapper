@@ -44,17 +44,17 @@ namespace socketlib
 		return ssl_obj;
 	}
 
-	int SSLPtr::shutdown() const
+	int SSLPtr::Shutdown() const
 	{
 		return SSL_shutdown(ssl_obj);
 	}
 
-	int SSLPtr::set_ssl_cert(const char* _cert_file_path) const
+	int SSLPtr::SetCert(const char* _cert_file_path) const
 	{
 		return SSL_CTX_use_certificate_file(ssl_ctx, _cert_file_path, SSL_FILETYPE_PEM);
 	}
 
-	int SSLPtr::set_private_key(const char* _key_file_path) const
+	int SSLPtr::SetKey(const char* _key_file_path) const
 	{
 		return SSL_CTX_use_PrivateKey_file(ssl_ctx, _key_file_path, SSL_FILETYPE_PEM);
 	}

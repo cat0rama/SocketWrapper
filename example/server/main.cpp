@@ -11,14 +11,15 @@ int main(int argc, char** argv)
 	try {
 		SSLServer srv("127.0.0.1", 4444);
 
-		srv._bind();
-		srv._listen();
+		srv.Bind();
 
-		if (srv.get_ssl().set_ssl_cert("privatekey.key") <= 0) {
+		srv.Listen();
+
+		if (srv.GetSSL().SetKey("privatekey.key") <= 0) {
 			throw ssl_error("error to get private key");
 		}
 		
-		if (srv.get_ssl().set_private_key("certificate.crt") <= 0) {
+		if (srv.GetSSL().SetCert("certificate.crt") <= 0) {
 			throw ssl_error("error to get certifivate");
 		}
 	}

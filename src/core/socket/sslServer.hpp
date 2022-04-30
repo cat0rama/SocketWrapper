@@ -13,15 +13,15 @@ namespace socketlib
 
 		~SSLServer();
 	public:
-		len_t _send(cock _sock, const char* _buf, int _flags = 0) const override;
+		len_t Send(cock _sock, const char* _buf, int _flags = 0) const override;
 
-		len_t _recv(cock _sock, char* _buf, len_t _buf_len, int _flags = 0) const override;
+		len_t Receive(cock _sock, char* _buf, len_t _buf_len, int _flags = 0) const override;
 
 		std::size_t GetError() const;
 
-		int ssl_accept() const;
+		int SSLAccept() const;
 
-		const SSLPtr& get_ssl() const;
+		const SSLPtr& GetSSL() const;
 	private:
 		SSLPtr ssl = eMachineType::SERVER;
 	};
