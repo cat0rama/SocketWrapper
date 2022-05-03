@@ -5,12 +5,12 @@
 
 namespace socketlib
 {
-	class SSLClient
+	class SSLClient : public ClientTcp
 	{
 	public:
-		SSLClient() = default;
+		SSLClient(const char* _ip, std::uint16_t port);
 
-		~SSLClient() = default;
+		~SSLClient();
 	public:
 
 	};

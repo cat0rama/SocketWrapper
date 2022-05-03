@@ -1,5 +1,5 @@
-#ifndef SSLSERVER_HPP_
-#define SSLSERVER_HPP_
+#ifndef SSL_SERVER_HPP_
+#define SSL_SERVER_HPP_
 
 #include "serverTcp.hpp"
 #include "SSLPtr.hpp"
@@ -13,9 +13,15 @@ namespace socketlib
 
 		~SSLServer();
 	public:
-		len_t Send(cock _sock, const char* _buf, int _flags = 0) const override;
+		SSLServer(const SSLServer&) = delete;
+		SSLServer(SSLServer&&) = delete;
 
-		len_t Receive(cock _sock, char* _buf, len_t _buf_len, int _flags = 0) const override;
+		SSLServer& operator=(const SSLServer&) = delete;
+		SSLServer& operator=(SSLServer&&) = delete;
+	public:
+		int SSLSend(const char* buf) const;
+
+		int SSLReceive(char* _buf, int _buf_len) const;
 
 		std::size_t GetError() const;
 

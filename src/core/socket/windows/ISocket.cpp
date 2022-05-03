@@ -16,6 +16,8 @@ namespace socketlib
 			is_init = FALSE;
 		}
 
+		//write realization for ipv6
+
 		addr.sin_family = AF_INET;
 		addr.sin_addr.S_un.S_addr = inet_addr(_ip);
 		addr.sin_port = htons(_port);
