@@ -16,7 +16,7 @@ namespace socketlib
 
 		~ClientTcp() = default;
 	public:
-		int _connect() const;
+		int Connect() const;
 	public:
 		ClientTcp& operator=(const ClientTcp& _client);
 	};

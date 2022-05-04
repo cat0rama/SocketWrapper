@@ -16,7 +16,7 @@ namespace socketlib
 		this->sock = _clt.sock;
 	}
 
-	int ClientTcp::_connect() const
+	int ClientTcp::Connect() const
 	{
 		return connect(sock, (sockaddr*)&addr, sizeof(addr));
 	}

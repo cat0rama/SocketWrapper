@@ -11,7 +11,7 @@ namespace socketlib
 	public:
 		SSLServer(const char* _ip, std::uint16_t _port, eAddrType _type = eAddrType::IPv4);
 
-		~SSLServer();
+		~SSLServer() = default;
 	public:
 		SSLServer(const SSLServer&) = delete;
 		SSLServer(SSLServer&&) = delete;

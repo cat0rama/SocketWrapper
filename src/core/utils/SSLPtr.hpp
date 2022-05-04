@@ -7,7 +7,7 @@
 
 #include "socket_exception.hpp"
 #include "defines.hpp"
-
+	
 namespace socketlib
 {
 	class SSLPtr
@@ -35,6 +35,7 @@ namespace socketlib
 	private:
 		ssl_context* ssl_ctx;
 		ssl* ssl_obj;
+	public:
 		bool is_init;
 	};
 }

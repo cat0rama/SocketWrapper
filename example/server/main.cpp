@@ -33,7 +33,7 @@ int main(int argc, char** argv)
 		SSL_set_fd(*srv.GetSSL(), client);
 
 		if (srv.SSLAccept() <= 0) {
-			std::puts("error to SSLAccept");
+			std::cout << "error to sslaccept : " << ERR_get_error();
 		}
 		else {
 			srv.SSLSend("Hello");
