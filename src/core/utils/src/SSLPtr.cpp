@@ -58,4 +58,9 @@ namespace socketlib
 	{
 		return SSL_CTX_use_PrivateKey_file(ssl_ctx, _key_file_path, SSL_FILETYPE_PEM);
 	}
+
+	std::size_t SSLPtr::GetError() const
+	{
+		return ERR_get_error();
+	}
 }

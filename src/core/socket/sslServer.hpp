@@ -23,8 +23,6 @@ namespace socketlib
 
 		int SSLReceive(char* _buf, int _buf_len) const;
 
-		std::size_t GetError() const;
-
 		int SSLAccept() const;
 
 		const SSLPtr& GetSSL() const;

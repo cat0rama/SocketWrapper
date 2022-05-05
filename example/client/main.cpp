@@ -31,13 +31,12 @@ int main(int argc, char** argv)
 		SSL_set_connect_state(*a.GetSSL());
 
 		if (a.SSLConnect() < 0) {
-			std::cout << "SSL connect error" << std::endl;
+			std::cout << "SSL connect error : " << ERR_get_error() << std::endl;
 		}
 
 		char buf[100] = {0};
 
 		a.SSLReceive(buf, 100);
-
 
 		std::cout << buf << std::endl;
 	}

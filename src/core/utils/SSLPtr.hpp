@@ -32,6 +32,8 @@ namespace socketlib
 		int SetCert(const char* _cert_file_path) const;
 
 		int SetKey(const char* _key_file_path) const;
+
+		std::size_t GetError() const;
 	private:
 		ssl_context* ssl_ctx;
 		ssl* ssl_obj;
