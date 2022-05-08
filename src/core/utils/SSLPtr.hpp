@@ -34,6 +34,8 @@ namespace socketlib
 		int SetKey(const char* _key_file_path) const;
 
 		std::size_t GetError() const;
+
+		const ssl_context* GetSSLCtx() const;
 	private:
 		ssl_context* ssl_ctx;
 		ssl* ssl_obj;

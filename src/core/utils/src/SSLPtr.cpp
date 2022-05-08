@@ -63,4 +63,9 @@ namespace socketlib
 	{
 		return ERR_get_error();
 	}
+
+	const SSLPtr::ssl_context* SSLPtr::GetSSLCtx() const
+	{
+		return ssl_ctx;
+	}
 }
