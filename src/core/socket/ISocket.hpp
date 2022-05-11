@@ -7,7 +7,9 @@
  #include <Ws2tcpip.h>
 #elif defined(__linux__)
  #include <netinet/in.h>
- #include <sys/socket.h>	
+ #include <sys/socket.h>
+ #include <arpa/inet.h>
+ #include <unistd.h>
 #endif
 
 #include "defines.hpp"

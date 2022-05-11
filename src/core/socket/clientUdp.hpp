@@ -7,7 +7,7 @@ namespace socketlib
 {
 	class ClientUdp : public ISocket 
 	{
-		explicit ClientUdp(const char* _ip, uint16_t _port, eAddrType _addr_type = eAddrType::IPv4);
+        ClientUdp(const char* _ip, uint16_t _port, eAddrType _addr_type = eAddrType::IPv4);
 		
 		~ClientUdp();
 	public:

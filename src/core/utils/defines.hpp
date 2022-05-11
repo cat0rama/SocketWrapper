@@ -1,6 +1,9 @@
 #ifndef DEFINES_HPP_
 #define DEFINES_HPP_
 
+#define TRUE 1
+#define FALSE 0
+
 namespace socketlib
 {
 	#if defined(_WIN32) || defined(_WIN64)
@@ -18,7 +21,7 @@ namespace socketlib
 
 	enum class eExitStatus : int
 	{
-		_SUCCES = 1, _ERROR = -1, UNKNOWN_ERROR = -2
+        SUCCES = 1, ERROR = -1, UNKNOWN_ERROR = -2
 	};
 
 	enum class eShutdownType : unsigned int
