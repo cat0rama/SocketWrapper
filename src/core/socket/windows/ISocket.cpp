@@ -32,16 +32,6 @@ namespace socketlib
 		WSACleanup();
 	}
 
-	len_t ISocket::Send(cock _sock, const char* _buf, int _flags) const
-	{
-		return send(_sock, _buf, strlen(_buf), _flags);
-	}
-
-	len_t ISocket::Receive(cock _sock, char* _buf, len_t _buf_len, int _flags) const
-	{
-		return recv(_sock, _buf, _buf_len, _flags);
-	}
-
 	int ISocket::Shutdown(cock _sock, eShutdownType _how) const
 	{
 		return shutdown(_sock, int(_how));

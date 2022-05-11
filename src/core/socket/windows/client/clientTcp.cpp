@@ -23,6 +23,16 @@ namespace socketlib
 		return connect(sock, (sockaddr*)&addr, sizeof(addr));
 	}
 
+	len_t ClientTcp::Send(cock _sock, const char* _buf, int _flags) const
+	{
+		return send(_sock, _buf, strlen(_buf), _flags);
+	}
+
+	len_t ClientTcp::Receive(cock _sock, char* _buf, len_t _buf_len, int _flags) const
+	{
+		return recv(_sock, _buf, _buf_len, _flags);
+	}
+
 	ClientTcp& ClientTcp::operator=(const ClientTcp& _client)
 	{
 		if (this != &_client) {

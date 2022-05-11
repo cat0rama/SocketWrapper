@@ -22,6 +22,10 @@ namespace socketlib
 
 		cock Accept() const;
 		
+		virtual len_t Send(cock _sock, const char* _buf, int _flags = 0) const;
+
+		virtual len_t Receive(cock _sock, char* _buf, len_t _buf_len, int _flags = 0) const;
+
 		void AddConnection(cock _client);
 
 		const std::size_t Size() const;

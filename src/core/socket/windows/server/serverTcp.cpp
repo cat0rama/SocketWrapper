@@ -43,6 +43,16 @@ namespace socketlib
 		return accept(sock, (sockaddr*)(&addr), &addr_size);
 	}
 
+	len_t ServerTcp::Send(cock _sock, const char* _buf, int _flags) const
+	{
+		return send(_sock, _buf, strlen(_buf), _flags);
+	}
+
+	len_t ServerTcp::Receive(cock _sock, char* _buf, len_t _buf_len, int _flags) const
+	{
+		return recv(_sock, _buf, _buf_len, _flags);
+	}
+
 	void ServerTcp::AddConnection(cock _client)
 	{
 		connections.push_back(_client);
