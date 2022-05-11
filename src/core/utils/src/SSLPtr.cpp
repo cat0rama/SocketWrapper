@@ -4,8 +4,8 @@ namespace socketlib
 {
 	SSLPtr::SSLPtr(eMachineType _type): is_init(true)
 	{
-		SSL_load_error_strings();
 		SSL_library_init();
+		SSL_load_error_strings();
 		OpenSSL_add_all_algorithms();
 
 		switch (_type)

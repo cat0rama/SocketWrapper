@@ -10,7 +10,7 @@ namespace socketlib
 	public:
 		ClientTcp() = default;
 
-		ClientTcp(const char* _ip, std::uint16_t _port);
+		ClientTcp(const char* _ip, std::uint16_t _port, eAddrType _addr_type = eAddrType::IPv4);
 		
 		explicit ClientTcp(const ClientTcp& _client);
 

@@ -3,8 +3,10 @@
 
 namespace socketlib
 {
-	ClientTcp::ClientTcp(const char* _ip, std::uint16_t _port) : ISocket(_ip, _port)
+	ClientTcp::ClientTcp(const char* _ip, std::uint16_t _port, eAddrType _addr_type) : ISocket(_ip, _port, _addr_type)
 	{
+		//add realization for ipv6
+
 		if ((sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) == SOCKET_ERROR){
 			throw socket_error("failed to initialize socket", WSAGetLastError());
 		}
