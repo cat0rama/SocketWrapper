@@ -25,7 +25,7 @@ namespace socketlib
 
 		virtual ~ISocket();
 	public:
-		virtual int Shutdown(cock _sock, eShutdownType _how = eShutdownType::SHUT_ALL) const;
+        virtual int Shutdown(cock _sock, eShutdownType _how = eShutdownType::SHUT_ALL) const;
 	public:
 		const cock& operator*() const;
 	protected:
