@@ -18,9 +18,8 @@ namespace socketlib
 
 	ServerTcp::ServerTcp(const ServerTcp& _serv)
 	{
-		this->addr = _serv.addr;
+		ISocket::operator=(_serv);
 		this->connections = _serv.connections;
-		this->sock = _serv.sock;
 	}
 
 	void ServerTcp::Bind() const
@@ -76,9 +75,8 @@ namespace socketlib
 	ServerTcp& ServerTcp::operator=(const ServerTcp& _serv)
 	{
 		if (this != &_serv) {
-			this->addr = _serv.addr;
+			ISocket::operator=(_serv);
 			this->connections = _serv.connections;
-			this->sock = _serv.sock;
 		}
 
 		return *this;

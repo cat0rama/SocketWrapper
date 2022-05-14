@@ -14,8 +14,7 @@ namespace socketlib
 
 	ClientTcp::ClientTcp(const ClientTcp& _clt)
 	{
-		this->addr = _clt.addr;
-		this->sock = _clt.sock;
+		ISocket::operator=(_clt);
 	}
 
 	int ClientTcp::Connect() const
@@ -36,8 +35,7 @@ namespace socketlib
 	ClientTcp& ClientTcp::operator=(const ClientTcp& _client)
 	{
 		if (this != &_client) {
-			this->addr = _client.addr;
-			this->sock = _client.sock;
+			ISocket::operator=(_client);
 		}
 
 		return *this;

@@ -10,9 +10,9 @@ namespace socketlib
 	public:
 		explicit ServerUdp(const char* _ip, uint16_t _port, eAddrType _addr_type = eAddrType::IPv4);
 		
-		~ServerUdp();
+		virtual ~ServerUdp() = default;
 	public:
-		void bind() const;
+		void Bind() const;
 
 		virtual len_t Send(cock _sock, const char* _buf, sockaddr _to, int _to_len, int _flags = 0) const;
 

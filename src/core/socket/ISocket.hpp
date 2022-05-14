@@ -18,16 +18,20 @@ namespace socketlib
 {
 	class ISocket
 	{
-	public:
+	protected:
 		ISocket();
 
 		ISocket(const char* _ip, uint16_t _port, eAddrType _addr_type = eAddrType::IPv4);
+
+		ISocket(const ISocket& _serv);
 
 		virtual ~ISocket();
 	public:
         virtual int Shutdown(cock _sock, eShutdownType _how = eShutdownType::SHUT_ALL) const;
 	public:
 		const cock& operator*() const;
+	protected:
+		void operator=(const ISocket& _serv);
 	protected:
 		cock sock;
 		bool is_init;

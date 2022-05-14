@@ -14,7 +14,7 @@ namespace socketlib
 
 		explicit ServerTcp(const ServerTcp& _serv);
 
-		~ServerTcp() = default;
+		virtual ~ServerTcp() = default;
 	public:
 		void Bind() const;
 

@@ -19,11 +19,6 @@ namespace socketlib
 		  IPv4 = 2, IPv6 = 23
 	};
 
-	enum class eExitStatus : int
-	{
-        SUCCES = 1, ERROR = -1, UNKNOWN_ERROR = -2
-	};
-
 	enum class eShutdownType : unsigned int
 	{
 		SHUT_RECV, SHUT_SEND, SHUT_ALL

@@ -26,6 +26,12 @@ namespace socketlib
 	ISocket::ISocket() : sock(NULL), is_init(FALSE)
 	{	}
 
+	ISocket::ISocket(const ISocket& _serv)
+	{
+		this->addr = _serv.addr;
+		this->sock = _serv.sock;
+	}
+
 	ISocket::~ISocket()
 	{
 		closesocket(sock);
@@ -40,5 +46,13 @@ namespace socketlib
 	const cock& ISocket::operator*() const 
 	{
 		return sock;
+	}
+
+	void ISocket::operator=(const ISocket& _sock)
+	{
+		if (this != &_sock) {
+			this->addr = _sock.addr;
+			this->sock = _sock.sock;
+		}
 	}
 }
