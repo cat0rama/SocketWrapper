@@ -16,9 +16,9 @@ namespace socketlib
 	public:
 		int Connect() const;
 
-		virtual len_t Send(cock _sock, const char* _buf, int _flags = 0) const;
+		int Send(const char* _buf, int _flags = 0) const;
 
-		virtual len_t Receive(cock _sock, char* _buf, len_t _buf_len, int _flags = 0) const;
+		int Receive(char* _buf, len_t _buf_len, int _flags = 0) const;
 	public:
 		ClientTcp& operator=(const ClientTcp& _client);
 	};

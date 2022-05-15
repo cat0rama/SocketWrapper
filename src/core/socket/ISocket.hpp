@@ -23,7 +23,7 @@ namespace socketlib
 
 		ISocket(const char* _ip, uint16_t _port, eAddrType _addr_type = eAddrType::IPv4);
 
-		ISocket(const ISocket& _serv);
+		explicit ISocket(const ISocket& _serv);
 
 		virtual ~ISocket();
 	public:
@@ -37,6 +37,8 @@ namespace socketlib
 		bool is_init;
 		sockaddr_in addr = { 0 };
 	};
+
+	hostent* GetHostByAddr(sockaddr_in _addr, int _adress_family);
 }
 
 #endif // !ISERVER_HPP_
