@@ -1,2 +1,2 @@
 # SocketLib
-A simple crossplatform socket library
+Simple cross-platform socket wrapper for more convenient use of familiar TCP/UDP sockets
