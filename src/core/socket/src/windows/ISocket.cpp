@@ -50,9 +50,9 @@ namespace socketlib
 
 	void ISocket::operator=(const ISocket& _base)
 	{
-		if (this != &_sock) {
-			this->addr = _sock.addr;
-			this->sock = _sock.sock;
+		if (this != &_base) {
+			this->addr = _base.addr;
+			this->sock = _base.sock;
 		}
 	}
 }

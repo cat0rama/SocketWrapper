@@ -5,12 +5,10 @@
 
 #if defined(_WIN32) || defined(_WIN64)
  #define GetError() (WSAGetLastError())
-
-#include <Ws2tcpip.h>
+ #include <Ws2tcpip.h>
 
 #elif defined(__linux__)
  #define GetError() (errno)
-
  #include <netinet/in.h>
  #include <sys/socket.h>
  #include <arpa/inet.h>

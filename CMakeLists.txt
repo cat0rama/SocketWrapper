@@ -9,5 +9,5 @@ add_subdirectory(vendor/openssl-cmake)
 add_subdirectory(example)
 
 if(WIN32)
-        set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT Server)
+        set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT Client)
 endif()

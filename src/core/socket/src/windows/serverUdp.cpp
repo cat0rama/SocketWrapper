@@ -28,12 +28,12 @@ namespace socketlib
 		}
 	}
 
-	int ServerUdp::Send(const char* _buf, int _buf_len, int _flags) const
+	int ServerUdp::Send(const char* _buf, len_t _buf_len, int _flags) const
 	{
 		return sendto(sock, _buf, _buf_len, _flags, (sockaddr*)&addr, sizeof(addr));
 	}
 
-	int ServerUdp::Receive(char* _buf, int _buf_len, sockaddr_in * _from, int _flags) const
+	int ServerUdp::Receive(char* _buf, len_t _buf_len, sockaddr_in * _from, int _flags) const
 	{
 		int from_size = sizeof(*_from);
 		return recvfrom(sock, _buf, _buf_len, _flags, (sockaddr*)&_from, &from_size);

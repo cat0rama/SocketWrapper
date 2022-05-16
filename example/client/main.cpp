@@ -22,4 +22,5 @@ int main(int argc, char** argv)
 	catch (const std::exception& er) {
 		std::printf("%s", er.what());
 	}
+	getchar();
 }
