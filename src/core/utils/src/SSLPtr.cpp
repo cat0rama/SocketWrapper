@@ -1,8 +1,8 @@
-#include "SSLPtr.hpp"
+#include "SSLWrapper.hpp"
 
 namespace socketlib
 {
-	SSLPtr::SSLPtr(eMachineType _type): is_init(true)
+	SSLWrapper::SSLWrapper(eMachineType _type): is_init(true)
 	{
 		SSL_library_init();
 		SSL_load_error_strings();
@@ -31,7 +31,7 @@ namespace socketlib
 		}
 	}
 
-	SSLPtr::~SSLPtr()
+	SSLWrapper::~SSLWrapper()
 	{
 		ERR_free_strings();
 		EVP_cleanup();
@@ -39,32 +39,32 @@ namespace socketlib
 		SSL_CTX_free(ssl_ctx);
 	}
 
-	SSLPtr::ssl* SSLPtr::operator*() const
+	SSLWrapper::ssl* SSLWrapper::operator*() const
 	{
 		return ssl_obj;
 	}
 
-	int SSLPtr::Shutdown() const
+	int SSLWrapper::Shutdown() const
 	{
 		return SSL_shutdown(ssl_obj);
 	}
 
-	int SSLPtr::SetCert(const char* _cert_file_path) const
+	int SSLWrapper::SetCert(const char* _cert_file_path) const
 	{
 		return SSL_CTX_use_certificate_file(ssl_ctx, _cert_file_path, SSL_FILETYPE_PEM);
 	}
 
-	int SSLPtr::SetKey(const char* _key_file_path) const
+	int SSLWrapper::SetKey(const char* _key_file_path) const
 	{
 		return SSL_CTX_use_PrivateKey_file(ssl_ctx, _key_file_path, SSL_FILETYPE_PEM);
 	}
 
-	std::size_t SSLPtr::GetError() const
+	std::size_t SSLWrapper::GetError() const
 	{
 		return ERR_get_error();
 	}
 
-	const SSLPtr::ssl_context* SSLPtr::GetSSLCtx() const
+	const SSLWrapper::ssl_context* SSLWrapper::GetSSLCtx() const
 	{
 		return ssl_ctx;
 	}
