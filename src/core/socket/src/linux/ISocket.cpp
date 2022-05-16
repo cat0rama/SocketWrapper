@@ -26,4 +26,12 @@ namespace socketlib
     {
         return sock;
     }
+
+    void ISocket::operator=(const ISocket& _base)
+    {
+        if(this != &_base){
+            this->addr = _base.addr;
+            this->sock = _base.sock;
+        }
+    }
 }

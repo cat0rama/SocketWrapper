@@ -5,52 +5,52 @@
 
 namespace socketlib
 {
-    ServerTcp::ServerTcp(const char* _ip, uint16_t _port, eAddrType _addr_type): ISocket(_ip, _port, _addr_type)
+    ServerTcp::ServerTcp(const char* _ip, uint16_t _port, eAddrType _addr_type):
+        ISocket(_ip, _port, _addr_type)
     {
         if(!is_init){
-            throw socket_error("failed to initialize lib");
+            throw socket_error("failed to initialize lib", GetError());
         }
 
         //add realization for ipv6
 
         if ((sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) < 0) {
-            throw socket_error("failed to initialize socket", sock);
+            throw socket_error("failed to initialize socket", GetError());
         }
     }
 
     ServerTcp::ServerTcp(const ServerTcp& _serv)
     {
-        this->addr = _serv.addr;
+        ISocket::operator=(_serv);
         this->connections = _serv.connections;
-        this->sock = _serv.sock;
     }
 
     void ServerTcp::Bind() const
     {
-        if (auto res = bind(sock, (sockaddr*)&addr, sizeof(addr)) < 0) {
-             throw socket_error("error to bind socket", res);
+        if (bind(sock, (sockaddr*)&addr, sizeof(addr)) < 0) {
+             throw socket_error("error to bind socket", GetError());
         }
     }
 
     void ServerTcp::Listen(uint16_t _queue) const
     {
-        if (auto res = listen(sock, _queue) < 0) {
-             throw socket_error("error to listen on socket", res);
+        if (listen(sock, _queue) < 0) {
+             throw socket_error("error to listen on socket", GetError());
         }
     }
 
     cock ServerTcp::Accept() const
     {
-        int addr_size = sizeof(addr);
-        return accept(sock, (sockaddr*)(&addr), (socklen_t*)&addr_size);
+        uint32_t addr_size = sizeof(addr);
+        return accept(sock, (sockaddr*)(&addr), &addr_size);
     }
 
-    len_t ServerTcp::Send(cock _sock, const char* _buf, int _flags) const
+    int ServerTcp::Send(cock _sock, const char* _buf, int _flags) const
     {
         return send(_sock, _buf, strlen(_buf), _flags);
     }
 
-    len_t ServerTcp::Receive(cock _sock, char* _buf, len_t _buf_len, int _flags) const
+    int ServerTcp::Receive(cock _sock, char* _buf, len_t _buf_len, int _flags) const
     {
         return recv(_sock, _buf, _buf_len, _flags);
     }
@@ -78,9 +78,8 @@ namespace socketlib
     ServerTcp& ServerTcp::operator=(const ServerTcp& _serv)
     {
         if (this != &_serv) {
-            this->addr = _serv.addr;
+            ISocket::operator=(_serv);
             this->connections = _serv.connections;
-            this->sock = _serv.sock;
         }
 
         return *this;

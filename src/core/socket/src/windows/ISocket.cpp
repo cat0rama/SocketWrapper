@@ -48,23 +48,11 @@ namespace socketlib
 		return sock;
 	}
 
-	void ISocket::operator=(const ISocket& _sock)
+	void ISocket::operator=(const ISocket& _base)
 	{
 		if (this != &_sock) {
 			this->addr = _sock.addr;
 			this->sock = _sock.sock;
 		}
-	}
-
-	hostent* GetHostByAddr(sockaddr_in _addr, int _adress_family)
-	{
-		hostent* ptr = nullptr;
-
-		if (!(ptr = gethostbyaddr((char*)&_addr.sin_addr, sizeof(_addr.sin_addr), _adress_family))) {
-			std::printf("%s %d", "error to get host", WSAGetLastError());
-			return nullptr;
-		}
-
-		return ptr;
 	}
 }

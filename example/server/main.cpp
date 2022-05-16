@@ -8,23 +8,23 @@ using namespace socketlib;
 int main(int argc, char** argv)
 {
 	try {
-		ServerUdp a("127.0.0.1", 4444);
-		char arr[100] = { 0 };
+        ServerTcp a("127.0.0.1", 4444);
 
-		sockaddr_in client_addr;
-		int addr_size = sizeof(client_addr);
+        a.Bind();
 
-		a.Bind();
+        a.Listen();
 
-		while (1) {
-			std::cout << a.Receive(arr, 100 - 1, &client_addr);
+        int sock = 0;
 
-			std::cout << arr << std::endl;
-			
-			std::cout << WSAGetLastError();
+        if((sock = a.Accept()) < 0){
+            std::cout << "error to accept : " << sock << std::endl;
+        }
 
-			Sleep(2000);
-		}
+        char buff[100] = {0};
+
+        std::cout << "Socket: " << sock << std::endl;
+        std::cout << "Recv Result: " << a.Receive(sock, buff, 100) << std::endl;
+        std::cout << "Buffer: " << buff << std::endl;
 	}
 	catch (const socket_error& er) {
 		std::printf("%s: %d", er.what(), er.get_code());
@@ -32,6 +32,4 @@ int main(int argc, char** argv)
 	catch (const std::exception& er) {
 		std::printf("%s", er.what());
 	}
-
-	system("pause");
 }

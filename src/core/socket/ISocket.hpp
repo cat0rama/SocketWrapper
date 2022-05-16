@@ -4,12 +4,18 @@
 #include <cstdint>
 
 #if defined(_WIN32) || defined(_WIN64)
- #include <Ws2tcpip.h>
+ #define GetError() (WSAGetLastError())
+
+#include <Ws2tcpip.h>
+
 #elif defined(__linux__)
+ #define GetError() (errno)
+
  #include <netinet/in.h>
  #include <sys/socket.h>
  #include <arpa/inet.h>
  #include <unistd.h>
+ #include <netdb.h>
 #endif
 
 #include "defines.hpp"
@@ -31,14 +37,14 @@ namespace socketlib
 	public:
 		const cock& operator*() const;
 	protected:
-		void operator=(const ISocket& _serv);
+        void operator=(const ISocket& _base);
 	protected:
 		cock sock;
 		bool is_init;
 		sockaddr_in addr = { 0 };
 	};
 
-	hostent* GetHostByAddr(sockaddr_in _addr, int _adress_family);
+    extern hostent* GetHostByAddr(sockaddr_in _addr, int _adress_family);
 }
 
 #endif // !ISERVER_HPP_
