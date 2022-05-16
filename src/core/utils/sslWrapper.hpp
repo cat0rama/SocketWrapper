@@ -1,5 +1,5 @@
-#ifndef SSLPTR_HPP_
-#define SSLPTR_HPP_
+#ifndef SSLWRAPPER_HPP_
+#define SSLWRAPPER_HPP_
 
 #include <openssl/bio.h>	
 #include <openssl/ssl.h>
@@ -10,20 +10,20 @@
 	
 namespace socketlib
 {
-	class SSLPtr
+	class SSLWrapper
 	{
 		using ssl_context = SSL_CTX;
 		using ssl = SSL;
 	public:
-		SSLPtr(eMachineType _type = eMachineType::NONE);
+		SSLWrapper(eMachineType _type = eMachineType::NONE);
 
-		~SSLPtr();
+		~SSLWrapper();
 	public:
-		SSLPtr(const SSLPtr&) = delete;
-		SSLPtr(SSLPtr&&) = delete;
+		SSLWrapper(const SSLWrapper&) = delete;
+		SSLWrapper(SSLWrapper&&) = delete;
 
-		SSLPtr& operator=(const SSLPtr&) = delete;
-		SSLPtr& operator=(SSLPtr&&) = delete;
+		SSLWrapper& operator=(const SSLWrapper&) = delete;
+		SSLWrapper& operator=(SSLWrapper&&) = delete;
 	public:
 		ssl* operator*() const;
 	public:

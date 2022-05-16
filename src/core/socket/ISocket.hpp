@@ -28,9 +28,9 @@ namespace socketlib
 		ISocket(const char* _ip, uint16_t _port, eAddrType _addr_type = eAddrType::IPv4);
 
 		explicit ISocket(const ISocket& _serv);
-
-		virtual ~ISocket();
 	public:
+		virtual ~ISocket();
+
         virtual int Shutdown(cock _sock, eShutdownType _how = eShutdownType::SHUT_ALL) const;
 	public:
 		const cock& operator*() const;
