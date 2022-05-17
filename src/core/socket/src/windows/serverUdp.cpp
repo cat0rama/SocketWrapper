@@ -6,13 +6,13 @@ namespace socketlib
 	ServerUdp::ServerUdp(const char* _ip, uint16_t _port, eAddrType _addr_type): ISocket(_ip, _port, _addr_type)
 	{	
 		if (!is_init) {
-			throw socket_error("failed to initialize winsock", WSAGetLastError());
+			throw socket_error("failed to initialize winsock", GetError());
 		}
 
 		//add realization for ipv6
 
 		if((sock = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) == SOCKET_ERROR){
-			throw socket_error("failed to initialize socket", WSAGetLastError());
+			throw socket_error("failed to initialize socket", GetError());
 		}
 	}
 
@@ -24,7 +24,7 @@ namespace socketlib
 	void ServerUdp::Bind() const
 	{
 		if (bind(sock, (sockaddr*)&addr, sizeof(addr)) == SOCKET_ERROR) {
-			throw socket_error("error to bind socket", WSAGetLastError());
+			throw socket_error("error to bind socket", GetError());
 		}
 	}
 

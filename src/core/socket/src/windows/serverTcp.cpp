@@ -25,14 +25,14 @@ namespace socketlib
 	void ServerTcp::Bind() const
 	{
 		if (bind(sock, (sockaddr*)&addr, sizeof(addr)) == SOCKET_ERROR) {
-			throw socket_error("error to bind socket", WSAGetLastError());
+			throw socket_error("error to bind socket", GetError());
 		}
 	}
 
 	void ServerTcp::Listen(uint16_t _queue) const
 	{
 		if (listen(sock, _queue)) {
-			throw socket_error("error to listen on socket", WSAGetLastError());
+			throw socket_error("error to listen on socket", GetError());
 		}
 	}
 

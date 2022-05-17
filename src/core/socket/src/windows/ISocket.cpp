@@ -12,7 +12,7 @@ namespace socketlib
 		WSADATA ws_lib;
 
 		if (WSAStartup(MAKEWORD(1, 1), &ws_lib) != 0) {
-			std::printf("%s %d", "failed to winsock init", WSAGetLastError());
+			std::printf("%s %d", "failed to winsock init", GetError());
 			is_init = FALSE;
 		}
 

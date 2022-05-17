@@ -6,11 +6,11 @@ namespace socketlib
 	ClientUdp::ClientUdp(const char* _ip, uint16_t _port, eAddrType _addr_type): ISocket(_ip, _port, _addr_type)
 	{	
 		if (!is_init) {
-			throw socket_error("failed to initialize winsock", WSAGetLastError());
+			throw socket_error("failed to initialize winsock", GetError());
 		}
 
 		if ((sock = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) == SOCKET_ERROR) {
-			throw socket_error("failed to initialize socket", WSAGetLastError());
+			throw socket_error("failed to initialize socket", GetError());
 		}
 	}
 

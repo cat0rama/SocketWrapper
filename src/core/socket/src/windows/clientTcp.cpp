@@ -6,13 +6,13 @@ namespace socketlib
 	ClientTcp::ClientTcp(const char* _ip, std::uint16_t _port, eAddrType _addr_type) : ISocket(_ip, _port, _addr_type)
 	{
 		if (!is_init) {
-			throw socket_error("failed to initialize winsock");
+			throw socket_error("failed to initialize winsock", GetError());
 		}
 
 		//add realization for ipv6
 
 		if ((sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) == SOCKET_ERROR){
-			throw socket_error("failed to initialize socket", WSAGetLastError());
+			throw socket_error("failed to initialize socket", GetError());
 		}
 	}
 
