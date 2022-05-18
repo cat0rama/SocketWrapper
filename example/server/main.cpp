@@ -1,5 +1,6 @@
 #include <socket_ptr.hpp>
 #include <serverTcp.hpp>
+#include <cstring>
 #include <iostream>
 
 using namespace socketlib;
@@ -38,12 +39,13 @@ public:
 		while (client) {
 			auto re_sz = serv->Receive(client, buffer, buffer_size);
 			
-			if (re_sz < 0) {
+			if (re_sz <= 0) {
 				std::cout << "Receive Error!" << std::endl;
 				break;
 			}
 
 			std::cout << "Client message: " << buffer << std::endl;
+			std::cout << re_sz << std::endl;
 			memset(buffer, 0, buffer_size);
 		}
 		

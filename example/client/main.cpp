@@ -30,7 +30,7 @@ public:
 
 			std::getline(std::cin, str);
 
-			clt->Send(str.c_str());
+            clt->Send(str.c_str());
 		}
 	}
 private:
