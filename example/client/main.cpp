@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <clientTcp.hpp>
 #include <socket_ptr.hpp>
 
@@ -19,11 +20,17 @@ public:
 	void MessageHandler()
 	{
 		if (clt->Connect() < 0) {
-			std::cout << "Connect error! Time out" << std::endl;
-			return;
+			throw socket_error("Connect error! Time out");
 		}
-		else {
-			std::cout << "Connect succesful!" << std::endl;
+
+		std::cout << "Connect succesful!" << std::endl;
+
+		while (1) {
+			std::string str;
+
+			std::getline(std::cin, str);
+
+			clt->Send(str.c_str());
 		}
 	}
 private:

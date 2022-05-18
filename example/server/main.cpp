@@ -4,6 +4,8 @@
 
 using namespace socketlib;
 
+constexpr len_t buffer_size = 1024;
+
 class Server
 {
 public:
@@ -24,17 +26,28 @@ public:
 	{
 		auto client = serv->Accept();
 
+		char* buffer = new char[buffer_size]();
+		buffer[buffer_size - 1] = '\0';
+
 		if (client < 0) {
-			std::cout << "Fail to accept client!" << std::endl;
-			return;
-		}
-		else {
+			throw socket_error("Failed to accept client");
+		} else {
 			std::cout << "Client has been accepted!" << std::endl;
 		}
 
-		while (1) {
-			//do recv message
+		while (client) {
+			auto re_sz = serv->Receive(client, buffer, buffer_size);
+			
+			if (re_sz < 0) {
+				std::cout << "Receive Error!" << std::endl;
+				break;
+			}
+
+			std::cout << "Client message: " << buffer << std::endl;
+			memset(buffer, 0, buffer_size);
 		}
+		
+		delete[] buffer;
 	}
 private:
 	SocketPtr<ServerTcp> serv;

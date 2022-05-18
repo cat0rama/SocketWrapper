@@ -12,14 +12,14 @@ namespace socketlib
 	class SocketPtr
 	{
 	public:
-		explicit SocketPtr() : sock_ptr(nullptr)
+		explicit SocketPtr() noexcept : sock_ptr(nullptr)
 		{	}
 
 		SocketPtr(const char* _ip, uint16_t _port, eAddrType _addr = eAddrType::IPv4) : 
 			sock_ptr(new _type(_ip, _port, _addr))
 		{	}
 
-		SocketPtr(_type* _sock)
+		SocketPtr(_type* _sock) noexcept
 		{
 			sock_ptr = _sock;
 			_sock = nullptr;
@@ -31,7 +31,7 @@ namespace socketlib
 			_sock.sock_ptr = nullptr;
 		}
 		
-		~SocketPtr()
+		~SocketPtr() noexcept
 		{
 			delete sock_ptr;
 		}
@@ -50,7 +50,7 @@ namespace socketlib
 			return static_cast<_type&>(*sock_ptr);
 		}
 
-		SocketPtr<_type>& operator=(SocketPtr<_type>&& _sock)
+		SocketPtr<_type>& operator=(SocketPtr<_type>&& _sock) noexcept
 		{
 			if (this != &_sock) {
 				this->sock_ptr = std::move(_sock.sock_ptr);

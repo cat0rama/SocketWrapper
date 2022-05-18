@@ -4,16 +4,16 @@
 #include <cstdint>
 
 #if defined(_WIN32) || defined(_WIN64)
- #define GetError() (WSAGetLastError())
  #include <Ws2tcpip.h>
+ #define GetError() (WSAGetLastError())
 
 #elif defined(__linux__)
- #define GetError() (errno)
  #include <netinet/in.h>
  #include <sys/socket.h>
  #include <arpa/inet.h>
  #include <unistd.h>
  #include <netdb.h>
+ #define GetError() (errno)
 #endif
 
 #include "defines.hpp"
@@ -41,8 +41,6 @@ namespace socketlib
 		bool is_init;
 		sockaddr_in addr = { 0 };
 	};
-
-    extern hostent* GetHostByAddr(sockaddr_in _addr, int _adress_family);
 }
 
 #endif // !ISERVER_HPP_
