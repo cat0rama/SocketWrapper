@@ -1,0 +1,49 @@
+\hypertarget{server_tcp_8hpp_source}{}\doxysection{server\+Tcp.\+hpp}
+\label{server_tcp_8hpp_source}\index{SocketLib/src/core/socket/serverTcp.hpp@{SocketLib/src/core/socket/serverTcp.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SERVER\_TCP\_HPP\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SERVER\_TCP\_HPP\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}ISocket.hpp"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesocketlib}{socketlib}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \textcolor{keyword}{class }\mbox{\hyperlink{classsocketlib_1_1_server_tcp}{ServerTcp}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsocketlib_1_1_i_socket}{ISocket}}}
+\DoxyCodeLine{11     \{}
+\DoxyCodeLine{12     \textcolor{keyword}{public}:}
+\DoxyCodeLine{13         \mbox{\hyperlink{classsocketlib_1_1_server_tcp}{ServerTcp}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* \_ip, uint16\_t \_port, eAddrType \_addr\_type = eAddrType::IPv4);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15         \textcolor{keyword}{explicit} \mbox{\hyperlink{classsocketlib_1_1_server_tcp}{ServerTcp}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsocketlib_1_1_server_tcp}{ServerTcp}}\& \_serv);}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17         \textcolor{keyword}{virtual} \mbox{\hyperlink{classsocketlib_1_1_server_tcp}{\string~ServerTcp}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{18     \textcolor{keyword}{public}:}
+\DoxyCodeLine{19         \textcolor{keywordtype}{void} Bind() \textcolor{keyword}{const};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21         \textcolor{keywordtype}{void} Listen(uint16\_t \_queue = 5) \textcolor{keyword}{const};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23         cock Accept() \textcolor{keyword}{const};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25         \textcolor{keywordtype}{int} Send(cock \_sock, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \_buf, \textcolor{keywordtype}{int} \_flags = 0) \textcolor{keyword}{const};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27         \textcolor{keywordtype}{int} Receive(cock \_sock, \textcolor{keywordtype}{char}* \_buf, len\_t \_buf\_len, \textcolor{keywordtype}{int} \_flags = 0) \textcolor{keyword}{const};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29         \textcolor{keywordtype}{void} AddConnection(cock \_client);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31         \textcolor{keyword}{const} std::size\_t Size() \textcolor{keyword}{const};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33         \textcolor{keyword}{const} std::vector<cock>\& GetConnections() \textcolor{keyword}{const};}
+\DoxyCodeLine{34     \textcolor{keyword}{public}:}
+\DoxyCodeLine{35         \textcolor{keyword}{const} cock\& operator[](\textcolor{keywordtype}{int} \_index) \textcolor{keyword}{const};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37         \mbox{\hyperlink{classsocketlib_1_1_server_tcp}{ServerTcp}}\& operator=(\textcolor{keyword}{const} \mbox{\hyperlink{classsocketlib_1_1_server_tcp}{ServerTcp}}\& \_serv);}
+\DoxyCodeLine{38     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{39         std::vector<cock> connections;}
+\DoxyCodeLine{40     \};}
+\DoxyCodeLine{41 \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// !\_SERVER\_TCP\_HPP\_}}
+
+\end{DoxyCode}

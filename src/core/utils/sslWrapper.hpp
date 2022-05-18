@@ -7,7 +7,7 @@
 
 #include "socket_exception.hpp"
 #include "defines.hpp"
-	
+
 namespace socketlib
 {
 	class SSLWrapper

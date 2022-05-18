@@ -4,16 +4,16 @@
 #include <cstdint>
 
 #if defined(_WIN32) || defined(_WIN64)
- #include <Ws2tcpip.h>
- #define GetError() (WSAGetLastError())
+#include <Ws2tcpip.h>
+#define GetError() (WSAGetLastError())
 
 #elif defined(__linux__)
- #include <netinet/in.h>
- #include <sys/socket.h>
- #include <arpa/inet.h>
- #include <unistd.h>
- #include <netdb.h>
- #define GetError() (errno)
+#include <netinet/in.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <unistd.h>
+#include <netdb.h>
+#define GetError() (errno)
 #endif
 
 #include "defines.hpp"
@@ -31,11 +31,11 @@ namespace socketlib
 	public:
 		virtual ~ISocket();
 
-        virtual int Shutdown(cock _sock, eShutdownType _how = eShutdownType::SHUT_ALL) const;
+		virtual int Shutdown(cock _sock, eShutdownType _how = eShutdownType::SHUT_ALL) const;
 	public:
 		const cock& operator*() const;
 	protected:
-        void operator=(const ISocket& _base);
+		void operator=(const ISocket& _base);
 	protected:
 		cock sock;
 		bool is_init;

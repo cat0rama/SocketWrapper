@@ -1,13 +1,13 @@
 #include "serverTcp.hpp"
 #include "socket_exception.hpp"
 
-namespace socketlib 
+namespace socketlib
 {
 	ServerTcp::ServerTcp(const char* _ip, uint16_t _port, eAddrType _addr_type) : ISocket(_ip, _port, _addr_type)
 	{
 		if (!is_init) {
 			throw socket_error("failed to initialize winsock");
-		}	
+		}
 
 		//realize socket for ipv6 version
 

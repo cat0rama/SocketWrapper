@@ -16,9 +16,9 @@ namespace socketlib
 	public:
 		void Bind() const;
 
-        int Send(const char* _buf, len_t _buf_len, int _flags = 0) const;
+		int Send(const char* _buf, len_t _buf_len, int _flags = 0) const;
 
-        int Receive(char* _buf, len_t _buf_len, sockaddr_in* _from, int _flags = 0) const;
+		int Receive(char* _buf, len_t _buf_len, sockaddr_in* _from, int _flags = 0) const;
 	public:
 		ServerUdp& operator=(const ServerUdp& _client);
 	};

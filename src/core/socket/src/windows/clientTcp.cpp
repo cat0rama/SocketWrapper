@@ -11,7 +11,7 @@ namespace socketlib
 
 		//add realization for ipv6
 
-		if ((sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) == SOCKET_ERROR){
+		if ((sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) == SOCKET_ERROR) {
 			throw socket_error("failed to initialize socket", GetError());
 		}
 	}

@@ -4,6 +4,8 @@ namespace socketlib
 {
 	ISocket::ISocket(const char* _ip, uint16_t _port, eAddrType _addr_type) : is_init(TRUE)
 	{
+		//add realization for ipv6
+
 		addr.sin_family = AF_INET;
 		addr.sin_addr.s_addr = inet_addr(_ip);
 		addr.sin_port = htons(_port);

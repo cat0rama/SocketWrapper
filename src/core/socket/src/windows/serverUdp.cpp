@@ -3,15 +3,15 @@
 
 namespace socketlib
 {
-	ServerUdp::ServerUdp(const char* _ip, uint16_t _port, eAddrType _addr_type): ISocket(_ip, _port, _addr_type)
-	{	
+	ServerUdp::ServerUdp(const char* _ip, uint16_t _port, eAddrType _addr_type) : ISocket(_ip, _port, _addr_type)
+	{
 		if (!is_init) {
 			throw socket_error("failed to initialize winsock", GetError());
 		}
 
 		//add realization for ipv6
 
-		if((sock = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) == SOCKET_ERROR){
+		if ((sock = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) == SOCKET_ERROR) {
 			throw socket_error("failed to initialize socket", GetError());
 		}
 	}
@@ -33,7 +33,7 @@ namespace socketlib
 		return sendto(sock, _buf, _buf_len, _flags, (sockaddr*)&addr, sizeof(addr));
 	}
 
-	int ServerUdp::Receive(char* _buf, len_t _buf_len, sockaddr_in * _from, int _flags) const
+	int ServerUdp::Receive(char* _buf, len_t _buf_len, sockaddr_in* _from, int _flags) const
 	{
 		int from_size = sizeof(*_from);
 		return recvfrom(sock, _buf, _buf_len, _flags, (sockaddr*)&_from, &from_size);

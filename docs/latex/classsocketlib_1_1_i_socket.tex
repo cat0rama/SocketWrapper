@@ -1,0 +1,46 @@
+\hypertarget{classsocketlib_1_1_i_socket}{}\doxysection{socketlib\+::ISocket Class Reference}
+\label{classsocketlib_1_1_i_socket}\index{socketlib::ISocket@{socketlib::ISocket}}
+Inheritance diagram for socketlib\+::ISocket\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsocketlib_1_1_i_socket}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_i_socket_a9f6ef7f15d4aeddfacc732f3f2fae19b}\label{classsocketlib_1_1_i_socket_a9f6ef7f15d4aeddfacc732f3f2fae19b}} 
+virtual int {\bfseries Shutdown} (cock \+\_\+sock, e\+Shutdown\+Type \+\_\+how=e\+Shutdown\+Type\+::\+SHUT\+\_\+\+ALL) const
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_i_socket_a40342cf998294f0ab024d929869dd226}\label{classsocketlib_1_1_i_socket_a40342cf998294f0ab024d929869dd226}} 
+const cock \& {\bfseries operator$\ast$} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_i_socket_a9932edea12040ff5712cb36c41f67fcd}\label{classsocketlib_1_1_i_socket_a9932edea12040ff5712cb36c41f67fcd}} 
+{\bfseries ISocket} (const char $\ast$\+\_\+ip, uint16\+\_\+t \+\_\+port, e\+Addr\+Type \+\_\+addr\+\_\+type=e\+Addr\+Type\+::\+IPv4)
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_i_socket_ad1270bf339bd4e206e3753f3eca59273}\label{classsocketlib_1_1_i_socket_ad1270bf339bd4e206e3753f3eca59273}} 
+{\bfseries ISocket} (const \mbox{\hyperlink{classsocketlib_1_1_i_socket}{ISocket}} \&\+\_\+serv)
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_i_socket_a4055a06a6340c58106a1c58d34682f87}\label{classsocketlib_1_1_i_socket_a4055a06a6340c58106a1c58d34682f87}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classsocketlib_1_1_i_socket}{ISocket}} \&\+\_\+base)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_i_socket_a7a49155ba658560791644e116e98779b}\label{classsocketlib_1_1_i_socket_a7a49155ba658560791644e116e98779b}} 
+cock {\bfseries sock}
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_i_socket_a606bdba7a686e79966cd8317c974e928}\label{classsocketlib_1_1_i_socket_a606bdba7a686e79966cd8317c974e928}} 
+bool {\bfseries is\+\_\+init}
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_i_socket_ae9eb2a380732158e9013269f92d58142}\label{classsocketlib_1_1_i_socket_ae9eb2a380732158e9013269f92d58142}} 
+sockaddr\+\_\+in {\bfseries addr} = \{ 0 \}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Socket\+Lib/src/core/socket/ISocket.\+hpp\end{DoxyCompactItemize}

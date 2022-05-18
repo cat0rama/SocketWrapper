@@ -1,0 +1,59 @@
+\hypertarget{classsocketlib_1_1_server_tcp}{}\doxysection{socketlib\+::Server\+Tcp Class Reference}
+\label{classsocketlib_1_1_server_tcp}\index{socketlib::ServerTcp@{socketlib::ServerTcp}}
+Inheritance diagram for socketlib\+::Server\+Tcp\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsocketlib_1_1_server_tcp}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_server_tcp_a136e1e9e68583fe10139e4b5da54fe85}\label{classsocketlib_1_1_server_tcp_a136e1e9e68583fe10139e4b5da54fe85}} 
+{\bfseries Server\+Tcp} (const char $\ast$\+\_\+ip, uint16\+\_\+t \+\_\+port, e\+Addr\+Type \+\_\+addr\+\_\+type=e\+Addr\+Type\+::\+IPv4)
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_server_tcp_a15da0d5fcb5759010c0be20f74d37511}\label{classsocketlib_1_1_server_tcp_a15da0d5fcb5759010c0be20f74d37511}} 
+{\bfseries Server\+Tcp} (const \mbox{\hyperlink{classsocketlib_1_1_server_tcp}{Server\+Tcp}} \&\+\_\+serv)
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_server_tcp_ab06ddc9571b885286dfc1f23c3074330}\label{classsocketlib_1_1_server_tcp_ab06ddc9571b885286dfc1f23c3074330}} 
+void {\bfseries Bind} () const
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_server_tcp_a8a75aeee72480d6a26e5758aa9d72ebb}\label{classsocketlib_1_1_server_tcp_a8a75aeee72480d6a26e5758aa9d72ebb}} 
+void {\bfseries Listen} (uint16\+\_\+t \+\_\+queue=5) const
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_server_tcp_a1d14b4fc84d398cae1eaf1dc8b2aa6af}\label{classsocketlib_1_1_server_tcp_a1d14b4fc84d398cae1eaf1dc8b2aa6af}} 
+cock {\bfseries Accept} () const
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_server_tcp_ae0adfaadd78b8379c4ea53c7ff61dacb}\label{classsocketlib_1_1_server_tcp_ae0adfaadd78b8379c4ea53c7ff61dacb}} 
+int {\bfseries Send} (cock \+\_\+sock, const char $\ast$\+\_\+buf, int \+\_\+flags=0) const
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_server_tcp_a1f061b2768501fc22663801fbb9bd607}\label{classsocketlib_1_1_server_tcp_a1f061b2768501fc22663801fbb9bd607}} 
+int {\bfseries Receive} (cock \+\_\+sock, char $\ast$\+\_\+buf, len\+\_\+t \+\_\+buf\+\_\+len, int \+\_\+flags=0) const
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_server_tcp_a14ec46bb888635f77b4be1731ebbc8f5}\label{classsocketlib_1_1_server_tcp_a14ec46bb888635f77b4be1731ebbc8f5}} 
+void {\bfseries Add\+Connection} (cock \+\_\+client)
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_server_tcp_a3babaf532c8546311e008f4861c88858}\label{classsocketlib_1_1_server_tcp_a3babaf532c8546311e008f4861c88858}} 
+const std\+::size\+\_\+t {\bfseries Size} () const
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_server_tcp_a14acf1f0a2e3f26d7ceff887d91fa8a1}\label{classsocketlib_1_1_server_tcp_a14acf1f0a2e3f26d7ceff887d91fa8a1}} 
+const std\+::vector$<$ cock $>$ \& {\bfseries Get\+Connections} () const
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_server_tcp_a43c2cf24f3c22aba0270fa8c89eac28a}\label{classsocketlib_1_1_server_tcp_a43c2cf24f3c22aba0270fa8c89eac28a}} 
+const cock \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (int \+\_\+index) const
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_server_tcp_afcb3e8d4b3038376f3a875cfdfa72e96}\label{classsocketlib_1_1_server_tcp_afcb3e8d4b3038376f3a875cfdfa72e96}} 
+\mbox{\hyperlink{classsocketlib_1_1_server_tcp}{Server\+Tcp}} \& {\bfseries operator=} (const \mbox{\hyperlink{classsocketlib_1_1_server_tcp}{Server\+Tcp}} \&\+\_\+serv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsocketlib_1_1_server_tcp_af70d2fafb128aef4c4289bcf9d93e16a}\label{classsocketlib_1_1_server_tcp_af70d2fafb128aef4c4289bcf9d93e16a}} 
+std\+::vector$<$ cock $>$ {\bfseries connections}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Socket\+Lib/src/core/socket/server\+Tcp.\+hpp\end{DoxyCompactItemize}

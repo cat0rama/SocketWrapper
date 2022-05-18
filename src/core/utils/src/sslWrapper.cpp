@@ -2,7 +2,7 @@
 
 namespace socketlib
 {
-	SSLWrapper::SSLWrapper(eMachineType _type): is_init(true)
+	SSLWrapper::SSLWrapper(eMachineType _type) : is_init(true)
 	{
 		SSL_library_init();
 		SSL_load_error_strings();

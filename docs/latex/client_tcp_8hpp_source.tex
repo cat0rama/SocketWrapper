@@ -1,0 +1,33 @@
+\hypertarget{client_tcp_8hpp_source}{}\doxysection{client\+Tcp.\+hpp}
+\label{client_tcp_8hpp_source}\index{SocketLib/src/core/socket/clientTcp.hpp@{SocketLib/src/core/socket/clientTcp.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef CLIENT\_TCP\_HPP\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define CLIENT\_TCP\_HPP\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}ISocket.hpp"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{15 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesocketlib}{socketlib}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     \textcolor{keyword}{class }\mbox{\hyperlink{classsocketlib_1_1_client_tcp}{ClientTcp}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsocketlib_1_1_i_socket}{ISocket}}}
+\DoxyCodeLine{18     \{}
+\DoxyCodeLine{19     \textcolor{keyword}{public}:}
+\DoxyCodeLine{20         \mbox{\hyperlink{classsocketlib_1_1_client_tcp}{ClientTcp}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* \_ip, std::uint16\_t \_port, eAddrType \_addr\_type = eAddrType::IPv4);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22         \textcolor{keyword}{explicit} \mbox{\hyperlink{classsocketlib_1_1_client_tcp}{ClientTcp}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsocketlib_1_1_client_tcp}{ClientTcp}}\& \_client);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24         \mbox{\hyperlink{classsocketlib_1_1_client_tcp}{\string~ClientTcp}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{25     \textcolor{keyword}{public}:}
+\DoxyCodeLine{26         \textcolor{keywordtype}{int} Connect() \textcolor{keyword}{const};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28         \textcolor{keywordtype}{int} Send(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* \_buf, \textcolor{keywordtype}{int} \_flags = 0) \textcolor{keyword}{const};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30         \textcolor{keywordtype}{int} Receive(\textcolor{keywordtype}{char}* \_buf, len\_t \_buf\_len, \textcolor{keywordtype}{int} \_flags = 0) \textcolor{keyword}{const};}
+\DoxyCodeLine{31     \textcolor{keyword}{public}:}
+\DoxyCodeLine{32         \mbox{\hyperlink{classsocketlib_1_1_client_tcp}{ClientTcp}}\& operator=(\textcolor{keyword}{const} \mbox{\hyperlink{classsocketlib_1_1_client_tcp}{ClientTcp}}\& \_client);}
+\DoxyCodeLine{33     \};}
+\DoxyCodeLine{34 \}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// !CLIENT\_TCP\_HPP\_}}
+
+\end{DoxyCode}

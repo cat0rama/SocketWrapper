@@ -15,7 +15,7 @@ namespace socketlib
 		socket_error(const char* _error, int _error_code) : str_error(_error), error_code(_error_code)
 		{	}
 
-		socket_error(): str_error("unknown error"), error_code(0)
+		socket_error() : str_error("unknown error"), error_code(0)
 		{	}
 
 		virtual ~socket_error() = default;
@@ -40,7 +40,7 @@ namespace socketlib
 		explicit ssl_error(const char* _error) : socket_error(_error)
 		{	}
 
-		ssl_error(const char* _error, int _error_code): socket_error(_error, _error_code)
+		ssl_error(const char* _error, int _error_code) : socket_error(_error, _error_code)
 		{	}
 
 		~ssl_error() = default;

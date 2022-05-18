@@ -3,8 +3,8 @@
 
 namespace socketlib
 {
-	ClientUdp::ClientUdp(const char* _ip, uint16_t _port, eAddrType _addr_type): ISocket(_ip, _port, _addr_type)
-	{	
+	ClientUdp::ClientUdp(const char* _ip, uint16_t _port, eAddrType _addr_type) : ISocket(_ip, _port, _addr_type)
+	{
 		if (!is_init) {
 			throw socket_error("failed to initialize winsock", GetError());
 		}
@@ -14,11 +14,11 @@ namespace socketlib
 		}
 	}
 
-	ClientUdp::ClientUdp(const ClientUdp& _client) 
+	ClientUdp::ClientUdp(const ClientUdp& _client)
 	{
 		ISocket::operator=(_client);
 	}
-	
+
 	int ClientUdp::Send(const char* _buf, int _buf_len, int _flags) const
 	{
 		return sendto(sock, _buf, _buf_len, _flags, (sockaddr*)&addr, sizeof(addr));
@@ -35,7 +35,7 @@ namespace socketlib
 		if (this != &_client) {
 			ISocket::operator=(_client);
 		}
-		
+
 		return *this;
 	}
 }

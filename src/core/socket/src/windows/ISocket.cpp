@@ -16,7 +16,7 @@ namespace socketlib
 			is_init = FALSE;
 		}
 
-		//write realization for ipv6
+		//add realization for ipv6
 
 		addr.sin_family = AF_INET;
 		addr.sin_addr.S_un.S_addr = inet_addr(_ip);
@@ -43,7 +43,7 @@ namespace socketlib
 		return shutdown(_sock, int(_how));
 	}
 
-	const cock& ISocket::operator*() const 
+	const cock& ISocket::operator*() const
 	{
 		return sock;
 	}

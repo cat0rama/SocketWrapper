@@ -1,0 +1,52 @@
+\hypertarget{_i_socket_8hpp_source}{}\doxysection{ISocket.\+hpp}
+\label{_i_socket_8hpp_source}\index{SocketLib/src/core/socket/ISocket.hpp@{SocketLib/src/core/socket/ISocket.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef ISERVER\_HPP\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define ISERVER\_HPP\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <cstdint>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#if defined(\_WIN32) || defined(\_WIN64)}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <Ws2tcpip.h>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define GetError() (WSAGetLastError())}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#elif defined(\_\_linux\_\_)}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <netinet/in.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <sys/socket.h>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <arpa/inet.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <netdb.h>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define GetError() (errno)}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}defines.hpp"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesocketlib}{socketlib}}}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23     \textcolor{keyword}{class }\mbox{\hyperlink{classsocketlib_1_1_i_socket}{ISocket}}}
+\DoxyCodeLine{24     \{}
+\DoxyCodeLine{25     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{26         \mbox{\hyperlink{classsocketlib_1_1_i_socket}{ISocket}}();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28         \mbox{\hyperlink{classsocketlib_1_1_i_socket}{ISocket}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* \_ip, uint16\_t \_port, eAddrType \_addr\_type = eAddrType::IPv4);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30         \textcolor{keyword}{explicit} \mbox{\hyperlink{classsocketlib_1_1_i_socket}{ISocket}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsocketlib_1_1_i_socket}{ISocket}}\& \_serv);}
+\DoxyCodeLine{31     \textcolor{keyword}{public}:}
+\DoxyCodeLine{32         \textcolor{keyword}{virtual} \mbox{\hyperlink{classsocketlib_1_1_i_socket}{\string~ISocket}}();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34         \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} Shutdown(cock \_sock, eShutdownType \_how = eShutdownType::SHUT\_ALL) \textcolor{keyword}{const};}
+\DoxyCodeLine{35     \textcolor{keyword}{public}:}
+\DoxyCodeLine{36         \textcolor{keyword}{const} cock\& operator*() \textcolor{keyword}{const};}
+\DoxyCodeLine{37     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{38         \textcolor{keywordtype}{void} operator=(\textcolor{keyword}{const} \mbox{\hyperlink{classsocketlib_1_1_i_socket}{ISocket}}\& \_base);}
+\DoxyCodeLine{39     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{40         cock sock;}
+\DoxyCodeLine{41         \textcolor{keywordtype}{bool} is\_init;}
+\DoxyCodeLine{42         sockaddr\_in addr = \{ 0 \};}
+\DoxyCodeLine{43     \};}
+\DoxyCodeLine{44 \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// !ISERVER\_HPP\_}}
+
+\end{DoxyCode}
