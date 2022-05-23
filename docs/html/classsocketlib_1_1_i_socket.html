@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacesocketlib.html">socketlib</a></li><li class="navelem"><a class="el" href="classsocketlib_1_1_i_socket.html">ISocket</a></li>  </ul>
+<li class="navelem"><b>socketlib</b></li><li class="navelem"><a class="el" href="classsocketlib_1_1_i_socket.html">ISocket</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -74,24 +74,29 @@ $(function() {
   <div class="headertitle"><div class="title">socketlib::ISocket Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A socket base class that implements basic socket initialization.  
+ <a href="classsocketlib_1_1_i_socket.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_i_socket_8hpp_source.html">ISocket.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for socketlib::ISocket:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classsocketlib_1_1_i_socket.png" usemap="#socketlib::ISocket_map" alt=""/>
   <map id="socketlib::ISocket_map" name="socketlib::ISocket_map">
-<area href="classsocketlib_1_1_client_tcp.html" alt="socketlib::ClientTcp" shape="rect" coords="0,56,128,80"/>
-<area href="classsocketlib_1_1_client_udp.html" alt="socketlib::ClientUdp" shape="rect" coords="138,56,266,80"/>
-<area href="classsocketlib_1_1_server_tcp.html" alt="socketlib::ServerTcp" shape="rect" coords="276,56,404,80"/>
-<area href="classsocketlib_1_1_server_udp.html" alt="socketlib::ServerUdp" shape="rect" coords="414,56,542,80"/>
+<area href="classsocketlib_1_1_client_tcp.html" title="Derived class from ISocket, implements TCP client logic." alt="socketlib::ClientTcp" shape="rect" coords="0,56,128,80"/>
+<area href="classsocketlib_1_1_client_udp.html" title="Derived class from ISocket, implements UDP client logic." alt="socketlib::ClientUdp" shape="rect" coords="138,56,266,80"/>
+<area href="classsocketlib_1_1_server_tcp.html" title="Derived class from ISocket, implements TCP server logic." alt="socketlib::ServerTcp" shape="rect" coords="276,56,404,80"/>
+<area href="classsocketlib_1_1_server_udp.html" title="Derived class from ISocket, implements UDP server logic." alt="socketlib::ServerUdp" shape="rect" coords="414,56,542,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9f6ef7f15d4aeddfacc732f3f2fae19b"><td class="memItemLeft" align="right" valign="top"><a id="a9f6ef7f15d4aeddfacc732f3f2fae19b" name="a9f6ef7f15d4aeddfacc732f3f2fae19b"></a>
+<tr class="memitem:ad824893893ac527feadd561a8aa01772"><td class="memItemLeft" align="right" valign="top"><a id="ad824893893ac527feadd561a8aa01772" name="ad824893893ac527feadd561a8aa01772"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Shutdown</b> (cock _sock, eShutdownType _how=eShutdownType::SHUT_ALL) const</td></tr>
-<tr class="separator:a9f6ef7f15d4aeddfacc732f3f2fae19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ad824893893ac527feadd561a8aa01772"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40342cf998294f0ab024d929869dd226"><td class="memItemLeft" align="right" valign="top"><a id="a40342cf998294f0ab024d929869dd226" name="a40342cf998294f0ab024d929869dd226"></a>
 const cock &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> () const</td></tr>
 <tr class="separator:a40342cf998294f0ab024d929869dd226"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,8 +125,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_init</b></td></tr>
 sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><b>addr</b> = { 0 }</td></tr>
 <tr class="separator:ae9eb2a380732158e9013269f92d58142"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >A socket base class that implements basic socket initialization. </p>
+<p ><a class="el" href="classsocketlib_1_1_i_socket.html" title="A socket base class that implements basic socket initialization.">ISocket</a> is the base class in which the main part of the socket is initialized (in the constructor), it also contains the socket descriptor and the addr structure. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>SocketLib/src/core/socket/<a class="el" href="_i_socket_8hpp_source.html">ISocket.hpp</a></li>
+<li>SocketLib/src/core/socket/src/linux/ISocket.cpp</li>
+<li>SocketLib/src/core/socket/src/windows/ISocket.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -8,6 +8,10 @@
 
 namespace socketlib
 {
+	/*!
+	\brief Special smart pointer implementation for sockets
+	*/
+
 	template<typename _type>
 	class SocketPtr
 	{

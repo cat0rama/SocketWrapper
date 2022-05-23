@@ -6,6 +6,10 @@
 
 namespace socketlib
 {
+	/*!
+	\brief Class for handling socket errors
+	*/
+
 	class socket_error
 	{
 	public:
@@ -33,6 +37,10 @@ namespace socketlib
 		const char* str_error;
 		int error_code;
 	};
+
+	/*!
+	\brief Class for handling ssl errors, derived from socket_error
+	*/
 
 	class ssl_error : public socket_error
 	{

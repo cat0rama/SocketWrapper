@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacesocketlib.html">socketlib</a></li><li class="navelem"><a class="el" href="classsocketlib_1_1_server_tcp.html">ServerTcp</a></li>  </ul>
+<li class="navelem"><b>socketlib</b></li><li class="navelem"><a class="el" href="classsocketlib_1_1_server_tcp.html">ServerTcp</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -73,13 +73,18 @@ $(function() {
   <div class="headertitle"><div class="title">socketlib::ServerTcp Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Derived class from <a class="el" href="classsocketlib_1_1_i_socket.html" title="A socket base class that implements basic socket initialization.">ISocket</a>, implements TCP server logic.  
+ <a href="classsocketlib_1_1_server_tcp.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="server_tcp_8hpp_source.html">serverTcp.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for socketlib::ServerTcp:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classsocketlib_1_1_server_tcp.png" usemap="#socketlib::ServerTcp_map" alt=""/>
   <map id="socketlib::ServerTcp_map" name="socketlib::ServerTcp_map">
-<area href="classsocketlib_1_1_i_socket.html" alt="socketlib::ISocket" shape="rect" coords="0,0,127,24"/>
+<area href="classsocketlib_1_1_i_socket.html" title="A socket base class that implements basic socket initialization." alt="socketlib::ISocket" shape="rect" coords="0,0,127,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -122,9 +127,9 @@ const cock &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[
 <a class="el" href="classsocketlib_1_1_server_tcp.html">ServerTcp</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classsocketlib_1_1_server_tcp.html">ServerTcp</a> &amp;_serv)</td></tr>
 <tr class="separator:afcb3e8d4b3038376f3a875cfdfa72e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classsocketlib_1_1_i_socket"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsocketlib_1_1_i_socket')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classsocketlib_1_1_i_socket.html">socketlib::ISocket</a></td></tr>
-<tr class="memitem:a9f6ef7f15d4aeddfacc732f3f2fae19b inherit pub_methods_classsocketlib_1_1_i_socket"><td class="memItemLeft" align="right" valign="top"><a id="a9f6ef7f15d4aeddfacc732f3f2fae19b" name="a9f6ef7f15d4aeddfacc732f3f2fae19b"></a>
+<tr class="memitem:ad824893893ac527feadd561a8aa01772 inherit pub_methods_classsocketlib_1_1_i_socket"><td class="memItemLeft" align="right" valign="top"><a id="ad824893893ac527feadd561a8aa01772" name="ad824893893ac527feadd561a8aa01772"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Shutdown</b> (cock _sock, eShutdownType _how=eShutdownType::SHUT_ALL) const</td></tr>
-<tr class="separator:a9f6ef7f15d4aeddfacc732f3f2fae19b inherit pub_methods_classsocketlib_1_1_i_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ad824893893ac527feadd561a8aa01772 inherit pub_methods_classsocketlib_1_1_i_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40342cf998294f0ab024d929869dd226 inherit pub_methods_classsocketlib_1_1_i_socket"><td class="memItemLeft" align="right" valign="top"><a id="a40342cf998294f0ab024d929869dd226" name="a40342cf998294f0ab024d929869dd226"></a>
 const cock &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> () const</td></tr>
 <tr class="separator:a40342cf998294f0ab024d929869dd226 inherit pub_methods_classsocketlib_1_1_i_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,8 +163,13 @@ Additional Inherited Members</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classsocketlib_1_1_i_socket.html">ISocket</a> &amp;_base)</td></tr>
 <tr class="separator:a4055a06a6340c58106a1c58d34682f87 inherit pro_methods_classsocketlib_1_1_i_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Derived class from <a class="el" href="classsocketlib_1_1_i_socket.html" title="A socket base class that implements basic socket initialization.">ISocket</a>, implements TCP server logic. </p>
+<p >This class inherits the initialization part (<a class="el" href="classsocketlib_1_1_i_socket.html" title="A socket base class that implements basic socket initialization.">ISocket</a>), respectively adding its own part of the code, characteristic of the TCP protocol, thereby implementing the logic of the TCP client </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>SocketLib/src/core/socket/<a class="el" href="server_tcp_8hpp_source.html">serverTcp.hpp</a></li>
+<li>SocketLib/src/core/socket/src/linux/serverTcp.cpp</li>
+<li>SocketLib/src/core/socket/src/windows/serverTcp.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

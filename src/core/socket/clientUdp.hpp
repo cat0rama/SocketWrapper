@@ -5,6 +5,15 @@
 
 namespace socketlib
 {
+	/*!
+	\brief Derived class from ISocket, implements UDP client logic
+
+	This class inherits the initialization part (ISocket),
+	respectively adding its own part of the code,
+	characteristic of the UDP protocol,
+	thereby implementing the logic of the UDP client
+	*/
+
 	class ClientUdp : public ISocket
 	{
 	public:

@@ -7,6 +7,15 @@
 
 namespace socketlib
 {
+	/*!
+	\brief Derived class from ISocket, implements TCP server logic
+
+	This class inherits the initialization part (ISocket),
+	respectively adding its own part of the code,
+	characteristic of the TCP protocol,
+	thereby implementing the logic of the TCP client
+	*/
+
 	class ServerTcp : public ISocket
 	{
 	public:

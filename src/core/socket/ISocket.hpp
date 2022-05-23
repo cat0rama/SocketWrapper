@@ -20,6 +20,14 @@
 
 namespace socketlib
 {
+	/*!
+	\brief A socket base class that implements basic socket initialization.
+
+	ISocket is the base class in which the main part of the socket is
+	initialized (in the constructor), it also contains
+	the socket descriptor and the addr structure.
+	*/
+
 	class ISocket
 	{
 	protected:

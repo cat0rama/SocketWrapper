@@ -10,6 +10,12 @@
 
 namespace socketlib
 {
+	/*!
+	\brief A OpenSSL wrapper.
+
+	SSLWrapper is a wrapper over OpenSSL for more convenient use of the capabilities of this library.
+	*/
+
 	class SSLWrapper
 	{
 		using ssl_context = SSL_CTX;

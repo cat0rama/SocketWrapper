@@ -1,21 +1,18 @@
 var indexSectionsWithContent =
 {
   0: "cis",
-  1: "cis",
-  2: "s"
+  1: "cis"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "classes",
-  2: "namespaces"
+  1: "classes"
 };
 
 var indexSectionLabels =
 {
   0: "All",
-  1: "Classes",
-  2: "Namespaces"
+  1: "Classes"
 };
 

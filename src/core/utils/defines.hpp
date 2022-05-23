@@ -6,6 +6,11 @@
 
 namespace socketlib
 {
+	/*!
+	\brief Header file with definitions
+	This header file contains cross-platform definitions and enum sets for more convenient work
+	*/
+
 #if defined(_WIN32) || defined(_WIN64)
 	typedef unsigned long long cock;
 	typedef unsigned int len_t;
