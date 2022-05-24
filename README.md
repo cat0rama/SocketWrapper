@@ -19,5 +19,3 @@ mkdir build && cd build && cmake .. && make
 ### ![Examples](https://github.com/Retr0Wawe/SocketLib/tree/main/example)
 ### Architecture
 ![scheme](https://github.com/Retr0Wawe/SocketLib/blob/main/docs/architecture.png)
-### Documentation
-![docs](https://github.com/Retr0Wawe/SocketLib/blob/main/docs/html/index.html)
