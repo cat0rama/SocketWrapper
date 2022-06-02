@@ -1,4 +1,4 @@
-# SocketLib
+# SocketWrapper
 Simple cross-platform socket wrapper for more convenient use of familiar TCP/UDP sockets
 ### Download
 git clone --recursive https://github.com/Retr0Wawe/SocketLib
