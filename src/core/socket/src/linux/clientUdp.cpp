@@ -9,10 +9,10 @@ namespace socketlib
 		if (!is_init) {
 			throw socket_error("failed to initialize winsock", GetError());
 		}
+		
+		sock = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
 
-		//add realization for ipv6
-
-		if ((sock = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) < 0) {
+		if (!IsValidSocket(sock)) {
 			throw socket_error("failed to initialize socket", GetError());
 		}
 	}

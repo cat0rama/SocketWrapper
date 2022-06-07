@@ -5,7 +5,6 @@
 
 #if defined(_WIN32) || defined(_WIN64)
 #include <Ws2tcpip.h>
-#define GetError() (WSAGetLastError())
 
 #elif defined(__linux__)
 #include <netinet/in.h>
@@ -13,7 +12,6 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <netdb.h>
-#define GetError() (errno)
 #endif
 
 #include "defines.hpp"

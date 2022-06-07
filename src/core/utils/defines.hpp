@@ -12,9 +12,15 @@ namespace socketlib
 	*/
 
 #if defined(_WIN32) || defined(_WIN64)
+	#define GetError() (WSAGetLastError())
+	#define IsValidSocket(sock)  ((sock) != INVALID_SOCKET)
+
 	typedef unsigned long long cock;
 	typedef unsigned int len_t;
 #elif defined(__linux__)
+	#define GetError() (errno)
+	#define IsValidSocket(sock)  ((sock) >= 0)
+
 	typedef unsigned int cock;
 	typedef unsigned long long len_t;
 #endif

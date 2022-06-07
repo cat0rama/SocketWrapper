@@ -12,9 +12,9 @@ namespace socketlib
 			throw socket_error("failed to initialize lib", GetError());
 		}
 
-		//add realization for ipv6
+		sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 
-		if ((sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) < 0) {
+		if (!IsValidSocket(sock)) {
 			throw socket_error("failed to initialize socket", GetError());
 		}
 	}
