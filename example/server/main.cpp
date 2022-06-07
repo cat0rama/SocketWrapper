@@ -1,7 +1,7 @@
 #include <socket_ptr.hpp>
 #include <serverTcp.hpp>
-#include <cstring>
 #include <iostream>
+#include <cstring>
 
 using namespace socketlib;
 

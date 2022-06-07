@@ -9,6 +9,7 @@ namespace socketlib
 {
 	ISocket::ISocket(const char* _ip, uint16_t _port, eAddrType _addr_type) : is_init(TRUE)
 	{
+#if defined(_WIN32) || defined(_WIN64)
 		WSADATA ws_lib;
 
 		if (WSAStartup(MAKEWORD(1, 1), &ws_lib) != 0) {
@@ -16,10 +17,11 @@ namespace socketlib
 			is_init = FALSE;
 		}
 
-		//add realization for ipv6
-
-		addr.sin_family = AF_INET;
 		addr.sin_addr.S_un.S_addr = inet_addr(_ip);
+#elif
+		addr.sin_addr.s_addr = inet_addr(_ip);
+#endif
+		addr.sin_family = AF_INET;
 		addr.sin_port = htons(_port);
 	}
 
@@ -31,10 +33,10 @@ namespace socketlib
 		this->addr = _serv.addr;
 		this->sock = _serv.sock;
 	}
-
+	
 	ISocket::~ISocket()
 	{
-		closesocket(sock);
+		CloseSocket(sock);
 		WSACleanup();
 	}
 

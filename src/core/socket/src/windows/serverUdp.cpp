@@ -1,6 +1,6 @@
 #include "serverUdp.hpp"
 #include "socket_exception.hpp"
-
+	
 namespace socketlib
 {
 	ServerUdp::ServerUdp(const char* _ip, uint16_t _port, eAddrType _addr_type) : ISocket(_ip, _port, _addr_type)
@@ -8,10 +8,10 @@ namespace socketlib
 		if (!is_init) {
 			throw socket_error("failed to initialize winsock", GetError());
 		}
+				
+		sock = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
 
-		//add realization for ipv6
-
-		if ((sock = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) == SOCKET_ERROR) {
+		if (!IsValidSocket(sock)) {
 			throw socket_error("failed to initialize socket", GetError());
 		}
 	}

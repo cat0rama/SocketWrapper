@@ -10,16 +10,20 @@ namespace socketlib
 	\brief Header file with definitions
 	This header file contains cross-platform definitions and enum sets for more convenient work
 	*/
+#define SOCKET_ERROR -1
 
 #if defined(_WIN32) || defined(_WIN64)
 	#define GetError() (WSAGetLastError())
 	#define IsValidSocket(sock)  ((sock) != INVALID_SOCKET)
+	#define CloseSocket(sock) closesocket(sock);
 
 	typedef unsigned long long cock;
 	typedef unsigned int len_t;
 #elif defined(__linux__)
 	#define GetError() (errno)
 	#define IsValidSocket(sock)  ((sock) >= 0)
+	#define CloseSocket(sock) close(sock);
+
 
 	typedef unsigned int cock;
 	typedef unsigned long long len_t;
