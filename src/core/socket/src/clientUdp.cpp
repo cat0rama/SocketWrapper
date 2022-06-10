@@ -28,7 +28,7 @@ namespace socketlib
 
 	int ClientUdp::Receive(char* _buf, int _buf_len, sockaddr_in* _from, int _flags) const
 	{
-		int from_len = sizeof(_from);
+		socklen_t from_len = sizeof(_from);
 		return recvfrom(sock, _buf, _buf_len, _flags, (sockaddr*)&_from, &from_len);
 	}
 

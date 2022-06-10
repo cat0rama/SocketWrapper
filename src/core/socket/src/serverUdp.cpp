@@ -35,7 +35,7 @@ namespace socketlib
 
 	int ServerUdp::Receive(char* _buf, len_t _buf_len, sockaddr_in* _from, int _flags) const
 	{
-		int from_size = sizeof(*_from);
+		socklen_t from_size = sizeof(*_from);
 		return recvfrom(sock, _buf, _buf_len, _flags, (sockaddr*)&_from, &from_size);
 	}
 

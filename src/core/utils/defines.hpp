@@ -19,14 +19,15 @@ namespace socketlib
 
 	typedef unsigned long long cock;
 	typedef unsigned int len_t;
+	typedef int socklen_t;
 #elif defined(__linux__)
 	#define GetError() (errno)
 	#define IsValidSocket(sock)  ((sock) >= 0)
 	#define CloseSocket(sock) close(sock);
 
-
 	typedef unsigned int cock;
 	typedef unsigned long long len_t;
+	typedef unsigned int socklen_t;
 #endif
 
 	enum class eAddrType : unsigned int

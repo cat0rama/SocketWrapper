@@ -1,6 +1,8 @@
 #include "serverTcp.hpp"
 #include "socket_exception.hpp"
 
+#include <cstring>
+
 namespace socketlib
 {
 	ServerTcp::ServerTcp(const char* _ip, uint16_t _port, eAddrType _addr_type) : ISocket(_ip, _port, _addr_type)
@@ -38,7 +40,7 @@ namespace socketlib
 
 	cock ServerTcp::Accept() const
 	{
-		int addr_size = sizeof(addr);
+		socklen_t addr_size = sizeof(addr);
 		return accept(sock, (sockaddr*)(&addr), &addr_size);
 	}
 
